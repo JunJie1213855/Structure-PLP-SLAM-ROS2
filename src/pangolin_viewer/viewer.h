@@ -99,11 +99,11 @@ namespace pangolin_viewer
          * Follow to the specified camera pose
          * @param gl_cam_pose_wc
          */
-        void follow_camera(const pangolin::OpenGlMatrix &gl_cam_pose_wc);
+        void follow_camera(const pangolin::OpenGlMatrix &view_matrix);
 
         /**
          * Get the current camera pose via the map publisher
-         * @return
+         * @return T_wc = camera-to-world (camera pose in world, for drawing and Follow)
          */
         pangolin::OpenGlMatrix get_current_cam_pose();
 

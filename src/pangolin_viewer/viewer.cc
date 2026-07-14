@@ -95,7 +95,7 @@ namespace pangolin_viewer
         // create frame window
         cv::namedWindow(frame_viewer_name_);
 
-        pangolin::OpenGlMatrix gl_cam_pose_wc; // camera -> world
+        pangolin::OpenGlMatrix gl_cam_pose_wc; // camera -> world (pose in world)
         gl_cam_pose_wc.SetIdentity();
 
         while (true)
@@ -105,10 +105,11 @@ namespace pangolin_viewer
 
             // 1. draw the map window
 
-            // get current camera pose as OpenGL matrix
+            // get current camera pose as OpenGL matrix (T_wc = camera-to-world)
             gl_cam_pose_wc = get_current_cam_pose();
 
             // make the rendering camera follow to the current camera
+            // Pangolin Follow() expects camera POSE in world = T_wc = camera-to-world
             follow_camera(gl_cam_pose_wc);
 
             // set rendering state
@@ -219,28 +220,28 @@ namespace pangolin_viewer
         }
     }
 
-    void viewer::follow_camera(const pangolin::OpenGlMatrix &gl_cam_pose_wc)
+    void viewer::follow_camera(const pangolin::OpenGlMatrix &view_matrix)
     {
         if (*menu_follow_camera_ && follow_camera_)
         {
-            // ORB-SLAM3 pattern: Follow() stores T_cw for Handler3D
-            s_cam_->Follow(gl_cam_pose_wc);
+            // Follow the current camera: view_matrix = T_cw (world-to-camera)
+            s_cam_->Follow(view_matrix);
         }
         else if (*menu_follow_camera_ && !follow_camera_)
         {
-            // State transition: reset projection + model-view (matching initial setup), then follow
+            // State transition: reset projection, then set a close viewpoint so the camera fills ~25% of the window
             s_cam_->SetProjectionMatrix(pangolin::ProjectionMatrix(map_viewer_width_, map_viewer_height_,
                                        viewpoint_f_, viewpoint_f_,
                                        map_viewer_width_ / 2, map_viewer_height_ / 2, 0.1, 1e6));
-            s_cam_->SetModelViewMatrix(pangolin::ModelViewLookAt(viewpoint_x_ * 5.f, viewpoint_y_ * 5.f, viewpoint_z_ * 5.f,
+            // Close-up viewpoint: camera fills ~25% of viewport (matches ORB_SLAM3 convention)
+            s_cam_->SetModelViewMatrix(pangolin::ModelViewLookAt(0.0, -0.8, -1.5,
                                        0, 0, 0, 0.0, -1.0, 0.0));
-            s_cam_->Follow(gl_cam_pose_wc);
+            s_cam_->Follow(view_matrix);
             follow_camera_ = true;
         }
         else if (!*menu_follow_camera_ && follow_camera_)
         {
             // Align with ORB_SLAM3: just set flag, do NOT call Unfollow()
-            // Unfollow() corrupts Pangolin's internal view state
             follow_camera_ = false;
         }
     }
@@ -283,14 +284,16 @@ namespace pangolin_viewer
     pangolin::OpenGlMatrix viewer::get_current_cam_pose()
     {
         const auto cam_pose_cw = map_publisher_->get_current_cam_pose();
+        // Return T_wc = camera-to-world (the camera's pose in world space)
+        // cam_pose_cw = T_cw (world-to-camera), inverse = T_wc (camera-to-world)
         const pangolin::OpenGlMatrix gl_cam_pose_wc(cam_pose_cw.inverse().eval());
         return gl_cam_pose_wc;
     }
 
     void viewer::draw_current_cam_pose(const pangolin::OpenGlMatrix &gl_cam_pose_wc)
     {
-        // 3x larger than keyframes for clear distinction
-        const float w = camera_size_ * *menu_frm_size_ * 3.0f;
+        // Large frustum so it's clearly visible when Follow Camera is active
+        const float w = camera_size_ * *menu_frm_size_ * 8.0f;
 
         // Bright red camera — always visible and distinct from map elements
         glLineWidth(4.0f);
