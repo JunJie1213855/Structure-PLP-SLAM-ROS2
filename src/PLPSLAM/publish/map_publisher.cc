@@ -81,6 +81,11 @@ namespace PLPSLAM
         {
             std::lock_guard<std::mutex> lock(mtx_cam_pose_);
             cam_pose_cw_ = cam_pose_cw;
+            static int call_count = 0;
+            if (call_count < 3) {
+                spdlog::info("[map_publisher] set_current_cam_pose called (#{}), position: ({:.3f}, {:.3f}, {:.3f})",
+                             ++call_count, cam_pose_cw_(0,3), cam_pose_cw_(1,3), cam_pose_cw_(2,3));
+            }
         }
 
         Mat44_t map_publisher::get_current_cam_pose()

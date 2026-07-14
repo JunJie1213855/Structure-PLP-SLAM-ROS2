@@ -295,6 +295,36 @@ namespace pangolin_viewer
         // Large frustum so it's clearly visible when Follow Camera is active
         const float w = camera_size_ * *menu_frm_size_ * 8.0f;
 
+        // Diagnostic: print camera vs map position once per second
+        static int frame_count = 0;
+        if (frame_count == 0) {
+            const float cam_x = gl_cam_pose_wc.m[3];
+            const float cam_y = gl_cam_pose_wc.m[7];
+            const float cam_z = gl_cam_pose_wc.m[11];
+            spdlog::info("[viewer] Current camera position: ({:.3f}, {:.3f}, {:.3f})", cam_x, cam_y, cam_z);
+
+            // Get nearest keyframe position for comparison
+            std::vector<PLPSLAM::data::keyframe *> keyfrms;
+            map_publisher_->get_keyframes(keyfrms);
+            if (!keyfrms.empty()) {
+                auto first_kf = keyfrms.front();
+                auto first_center = first_kf->get_cam_center();
+                spdlog::info("[viewer] First keyframe center: ({:.3f}, {:.3f}, {:.3f})",
+                             first_center(0), first_center(1), first_center(2));
+                // Find distance from camera to nearest keyframe
+                float min_dist = 1e9;
+                for (auto kf : keyfrms) {
+                    if (!kf) continue;
+                    auto c = kf->get_cam_center();
+                    float dx = cam_x - c(0), dy = cam_y - c(1), dz = cam_z - c(2);
+                    float dist = dx*dx + dy*dy + dz*dz;
+                    if (dist < min_dist) min_dist = dist;
+                }
+                spdlog::info("[viewer] Min camera-to-keyframe distance: {:.3f} (in map coords)", std::sqrt(min_dist));
+            }
+        }
+        frame_count = (frame_count + 1) % 30;  // log every 30 frames (~1/sec)
+
         // Bright red camera — always visible and distinct from map elements
         glLineWidth(4.0f);
         glColor3f(1.0f, 0.1f, 0.1f);

@@ -71,18 +71,17 @@ export LD_LIBRARY_PATH=$PWD/build/lib:$PWD/3rd/Pangolin/install/lib:$HOME/.local
 ### ROS2 节点建图
 
 ```bash
-cd ros2
 source /opt/ros/humble/setup.bash
-source install/setup.bash
+source ros2/install/setup.bash
 
 # 终端 1: SLAM 建图 + 保存
 ros2 run plpslam_ros2 rgbd \
-    ../orb_vocab/orb_vocab.dbow2 \
-    ../example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
-    0 1 mymap.msg
+    ./orb_vocab/orb_vocab.dbow2 \
+    ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
+    1 1 mymap.msg
 
 # 终端 2: 高速发布数据
-ros2 run plpslam_ros2 tum_publisher /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere --fast
+ros2 run plpslam_ros2 tum_publisher /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere --rate 30
 ```
 
 > ROS2 参数 (8 个)：`<vocab> <config> <use_line> <eval_log> <save_map> <load_map> <mapping>`
@@ -92,9 +91,9 @@ ros2 run plpslam_ros2 tum_publisher /home/ros/dataset/Tum-RGBD/rgbd_dataset_frei
 ```bash
 # 纯重定位模式（不修改地图）
 ros2 run plpslam_ros2 rgbd \
-    ../orb_vocab/orb_vocab.dbow2 \
-    ../example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
-    0 0 "" mymap.msg 0
+    ./orb_vocab/orb_vocab.dbow2 \
+    ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
+    1 0 "" mymap.msg 0
 ```
 
 ```bash
