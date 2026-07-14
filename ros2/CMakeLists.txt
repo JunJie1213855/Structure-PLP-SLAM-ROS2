@@ -20,16 +20,24 @@ find_package(Eigen3 REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(DBoW2 REQUIRED)
 
-# ---- PLPSLAM library (linked directly from build tree) ----
+# ---- Common include dirs ----
+include_directories(
+  include
+  /opt/ros/humble/include
+  $ENV{HOME}/lib/SLAM/VIO/Structure-PLP-SLAM/src
+  $ENV{HOME}/lib/SLAM/VIO/Structure-PLP-SLAM/src/pangolin_viewer
+  $ENV{HOME}/lib/SLAM/VIO/Structure-PLP-SLAM/3rd/json/include
+  $ENV{HOME}/lib/SLAM/VIO/Structure-PLP-SLAM/3rd/spdlog/include
+  ${DBoW2_INCLUDE_DIRS}
+)
+
+# ---- PLPSLAM libraries ----
 set(PLPSLAM_ROOT "$ENV{HOME}/lib/SLAM/VIO/Structure-PLP-SLAM")
 set(PLPSLAM_LIB "${PLPSLAM_ROOT}/build/lib/libPLPSLAM.so")
-set(_3rd "${PLPSLAM_ROOT}/3rd")
-set(PLPSLAM_INCLUDE_DIR "${PLPSLAM_ROOT}/src"
-                        "${_3rd}/json/include"
-                        "${_3rd}/spdlog/include")
+set(PLPSLAM_PANGOLIN_VIEWER_LIB "${PLPSLAM_ROOT}/build/lib/libpangolin_viewer.so")
 
 # ---- Common compile definitions ----
-set(PLPSLAM_DEFS USE_DBOW2)
+add_definitions(-DUSE_DBOW2 -DUSE_PANGOLIN_VIEWER)
 
 # ---- Monocular ----
 add_executable(mono
@@ -37,10 +45,9 @@ add_executable(mono
   src/mono/mono-slam-node.cpp
 )
 ament_target_dependencies(mono rclcpp sensor_msgs cv_bridge Pangolin)
-target_include_directories(mono PRIVATE include ${PLPSLAM_INCLUDE_DIR} ${DBoW2_INCLUDE_DIRS})
-target_compile_definitions(mono PRIVATE ${PLPSLAM_DEFS})
 target_link_libraries(mono
   ${PLPSLAM_LIB}
+  ${PLPSLAM_PANGOLIN_VIEWER_LIB}
   ${Pangolin_LIBRARIES}
   ${OpenCV_LIBS}
   Eigen3::Eigen
@@ -54,10 +61,9 @@ add_executable(rgbd
   src/rgbd/rgbd-slam-node.cpp
 )
 ament_target_dependencies(rgbd rclcpp sensor_msgs cv_bridge message_filters Pangolin)
-target_include_directories(rgbd PRIVATE include ${PLPSLAM_INCLUDE_DIR} ${DBoW2_INCLUDE_DIRS})
-target_compile_definitions(rgbd PRIVATE ${PLPSLAM_DEFS})
 target_link_libraries(rgbd
   ${PLPSLAM_LIB}
+  ${PLPSLAM_PANGOLIN_VIEWER_LIB}
   ${Pangolin_LIBRARIES}
   ${OpenCV_LIBS}
   Eigen3::Eigen
@@ -71,10 +77,9 @@ add_executable(stereo
   src/stereo/stereo-slam-node.cpp
 )
 ament_target_dependencies(stereo rclcpp sensor_msgs cv_bridge message_filters Pangolin)
-target_include_directories(stereo PRIVATE include ${PLPSLAM_INCLUDE_DIR} ${DBoW2_INCLUDE_DIRS})
-target_compile_definitions(stereo PRIVATE ${PLPSLAM_DEFS})
 target_link_libraries(stereo
   ${PLPSLAM_LIB}
+  ${PLPSLAM_PANGOLIN_VIEWER_LIB}
   ${Pangolin_LIBRARIES}
   ${OpenCV_LIBS}
   Eigen3::Eigen
@@ -82,7 +87,12 @@ target_link_libraries(stereo
   ${DBoW2_LIBS}
 )
 
-install(TARGETS mono rgbd stereo
+# ---- TUM Dataset Publisher ----
+add_executable(tum_publisher src/publisher/tum_publisher.cpp)
+ament_target_dependencies(tum_publisher rclcpp sensor_msgs cv_bridge)
+target_link_libraries(tum_publisher ${OpenCV_LIBS})
+
+install(TARGETS mono rgbd stereo tum_publisher
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch/

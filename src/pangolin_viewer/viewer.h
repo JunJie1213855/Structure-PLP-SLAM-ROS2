@@ -214,7 +214,7 @@ namespace pangolin_viewer
         std::unique_ptr<pangolin::OpenGlRenderState> s_cam_;
 
         // current state
-        bool follow_camera_ = false;
+        bool follow_camera_ = true;
         bool mapping_mode_ = true;
         bool loop_detection_mode_ = true;
 

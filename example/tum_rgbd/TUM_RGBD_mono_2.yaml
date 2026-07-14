@@ -48,4 +48,5 @@ PangolinViewer.camera_line_width: 3
 PangolinViewer.viewpoint_x: 0
 PangolinViewer.viewpoint_y: -0.9
 PangolinViewer.viewpoint_z: -1.9
+PangolinViewer.color_scheme: "white"
 PangolinViewer.viewpoint_f: 400

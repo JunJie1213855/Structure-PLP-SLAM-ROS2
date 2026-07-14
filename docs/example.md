@@ -18,16 +18,16 @@ export LD_LIBRARY_PATH=$PWD/build/lib:$PWD/3rd/Pangolin/install/lib:$HOME/.local
 ```bash
 ./build/run_tum_rgbd_slam \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/rgbd_dataset_freiburg1_room \
-    -c ./example/tum_rgbd/TUM_RGBD_mono_1.yaml
+    -d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+    -c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml
 ```
 
 **点 + 线特征：**
 ```bash
 ./build/run_tum_rgbd_slam_with_line \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/rgbd_dataset_freiburg1_room \
-    -c ./example/tum_rgbd/TUM_RGBD_mono_1.yaml
+    -d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+    -c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml
 ```
 
 ### RGB-D（深度相机）
@@ -36,24 +36,24 @@ export LD_LIBRARY_PATH=$PWD/build/lib:$PWD/3rd/Pangolin/install/lib:$HOME/.local
 ```bash
 ./build/run_tum_rgbd_slam \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/rgbd_dataset_freiburg1_room \
-    -c ./example/tum_rgbd/TUM_RGBD_rgbd_1.yaml
+    -d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+    -c ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml
 ```
 
 **点 + 线特征：**
 ```bash
 ./build/run_tum_rgbd_slam_with_line \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/rgbd_dataset_freiburg1_room \
-    -c ./example/tum_rgbd/TUM_RGBD_rgbd_1.yaml
+    -d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+    -c ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml
 ```
 
 **点 + 线 + 面特征（RGB-D + 平面分割）：**  `run_slam_planeSeg`（已修改，同时启用线特征和面特征）
 ```bash
 ./build/run_slam_planeSeg \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/rgbd_dataset_with_masks \
-    -c ./example/tum_rgbd/TUM_RGBD_rgbd_1.yaml
+    -d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere_with_masks \
+    -c ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml
 ```
 
 > **配置文件说明：** `_1` 对应 fr1 系列，`_2` 对应 fr2，`_3` 对应 fr3。
@@ -173,8 +173,8 @@ export LD_LIBRARY_PATH=$PWD/build/lib:$PWD/3rd/Pangolin/install/lib:$HOME/.local
 ```bash
 ./build/run_tum_rgbd_slam \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/dataset \
-    -c ./example/tum_rgbd/TUM_RGBD_rgbd_1.yaml \
+    -d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+    -c ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
     --eval-log
 ```
 
@@ -231,8 +231,8 @@ rgbd_dataset_with_masks/
 ```bash
 ./build/run_image_localization \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/image/directory \
-    -c ./example/tum_rgbd/TUM_RGBD_mono_1.yaml \
+    -i /path/to/image/directory \
+    -c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml \
     -p ./map.msg
 ```
 
@@ -240,7 +240,97 @@ rgbd_dataset_with_masks/
 ```bash
 ./build/run_image_localization_point_line \
     -v ./orb_vocab/orb_vocab.dbow2 \
-    -d /path/to/image/directory \
-    -c ./example/tum_rgbd/TUM_RGBD_mono_1.yaml \
+    -i /path/to/image/directory \
+    -c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml \
     -p ./map.msg
 ```
+
+
+---
+
+## ROS2 运行
+
+### 环境设置
+
+```bash
+cd /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2
+
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+
+export LD_LIBRARY_PATH=$HOME/lib/SLAM/VIO/Structure-PLP-SLAM/build/lib:$HOME/lib/SLAM/VIO/Structure-PLP-SLAM/3rd/Pangolin/install/lib:$HOME/.local/lib:$LD_LIBRARY_PATH
+```
+
+### 单目 (Monocular)
+
+**点特征：**
+```bash
+ros2 run plpslam_ros2 mono \
+    ../orb_vocab/orb_vocab.dbow2 \
+    ../example/tum_rgbd/TUM_RGBD_mono_2.yaml \
+    0
+```
+
+**点 + 线特征：**
+```bash
+ros2 run plpslam_ros2 mono \
+    ../orb_vocab/orb_vocab.dbow2 \
+    ../example/tum_rgbd/TUM_RGBD_mono_2.yaml \
+    1
+```
+
+### RGB-D
+
+**点特征：**
+```bash
+ros2 run plpslam_ros2 rgbd \
+    ../orb_vocab/orb_vocab.dbow2 \
+    ../example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
+    0
+```
+
+**点 + 线特征：**
+```bash
+ros2 run plpslam_ros2 rgbd \
+    ../orb_vocab/orb_vocab.dbow2 \
+    ../example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
+    1
+```
+
+### 双目 (Stereo)
+
+**点特征：**
+```bash
+ros2 run plpslam_ros2 stereo \
+    ../orb_vocab/orb_vocab.dbow2 \
+    ../example/kitti/KITTI_stereo_00-02.yaml \
+    0
+```
+
+**点 + 线特征：**
+```bash
+ros2 run plpslam_ros2 stereo \
+    ../orb_vocab/orb_vocab.dbow2 \
+    ../example/kitti/KITTI_stereo_00-02.yaml \
+    1
+```
+
+> 第 4 个参数：`0` = 仅点特征，`1` = 点 + 线特征
+
+### 用 rosbag 播放
+
+```bash
+# 终端 1: 启动 SLAM
+ros2 run plpslam_ros2 mono ../orb_vocab/orb_vocab.dbow2 ../example/tum_rgbd/TUM_RGBD_mono_2.yaml 0
+
+# 终端 2: 播放 rosbag
+ros2 bag play your_dataset_bag --clock
+```
+
+### 订阅话题
+
+| 可执行文件 | 话题 | 消息类型 |
+|-----------|------|---------|
+| `mono` | `camera/image_raw` | `sensor_msgs/Image` |
+| `rgbd` | `camera/rgb` + `camera/depth` | `sensor_msgs/Image` |
+| `stereo` | `camera/left` + `camera/right` | `sensor_msgs/Image` |

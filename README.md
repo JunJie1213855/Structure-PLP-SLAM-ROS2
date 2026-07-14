@@ -179,8 +179,8 @@ Allowed options:
 ```
 ./build/run_tum_rgbd_slam \
 -v ./orb_vocab/orb_vocab.dbow2 \
--d /data/TUM_RGBD/rgbd_dataset_freiburg3_long_office_household \
--c ./example/tum_rgbd/TUM_RGBD_mono_3.yaml
+-d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+-c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml
 ```
 
 ### (2) KITTI dataset (monocular/stereo):
@@ -233,8 +233,8 @@ ros2 run plpslam_ros2 stereo $PWD/../orb_vocab/orb_vocab.dbow2 $PWD/../example/k
 ```
 ./build/run_tum_rgbd_slam_with_line \
 -v ./orb_vocab/orb_vocab.dbow2 \
--d /data/TUM_RGBD/rgbd_dataset_freiburg3_long_office_household \
--c ./example/tum_rgbd/TUM_RGBD_mono_3.yaml
+-d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+-c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml
 ```
 
 ### (2) ICL-NUIM (monocular/RGB-D)
@@ -270,8 +270,8 @@ First, pre-build a map using (monocular or RGB-D) SLAM:
 ```
 ./build/run_tum_rgbd_slam_with_line \
 -v ./orb_vocab/orb_vocab.dbow2 \
--d /data/TUM_RGBD/rgbd_dataset_freiburg3_long_office_household \
--c ./example/tum_rgbd/TUM_RGBD_rgbd_3.yaml \
+-d /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere \
+-c ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
 --map-db freiburg3_long_office_household.msg
 ```
 
@@ -279,8 +279,8 @@ Second, run the (monocular) image localization mode, notice that give the path t
 ```
 ./build/run_image_localization_point_line \
 -v ./orb_vocab/orb_vocab.dbow2 \
--i /data/TUM_RGBD/rgbd_dataset_freiburg3_long_office_household/rgb \
--c ./example/tum_rgbd/TUM_RGBD_mono_3.yaml \
+-i /home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere/rgb \
+-c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml \
 --map-db freiburg3_long_office_household.msg
 ```
 
@@ -294,7 +294,7 @@ Second, run the (monocular) image localization mode, notice that give the path t
 
 * TUM RGB-D dataset, besides the folder which saves rgb image, you need to provide folder which saves the segmentation masks and a mask.txt file.
     ```
-    ./data/TUM_RGBD/rgbd_dataset_freiburg3_long_office_household/
+    ./home/ros/dataset/Tum-RGBD/rgbd_dataset_freiburg2_360_hemisphere/
     |
     |____./rgb/
     |____./depth/
@@ -339,7 +339,7 @@ Second, run the (monocular) image localization mode, notice that give the path t
 ./build/run_slam_planeSeg \
 -v ./orb_vocab/orb_vocab.dbow2 \
 -d /data/TUM_RGBD/rgbd_dataset_freiburg3_structure_texture_far \
--c ./example/tum_rgbd/TUM_RGBD_mono_3.yaml
+-c ./example/tum_rgbd/TUM_RGBD_mono_2.yaml
 ```
 
 ### (2) ICL-NUIM (monocular/RGB-D)
@@ -388,5 +388,5 @@ Important flags:
 ```
 gdb ./build/run_slam_planeSeg
 
-run -v ./orb_vocab/orb_vocab.dbow2 -d /data/TUM_RGBD/rgbd_dataset_freiburg3_structure_texture_far -c ./example/tum_rgbd/TUM_RGBD_rgbd_3.yaml
+run -v ./orb_vocab/orb_vocab.dbow2 -d /data/TUM_RGBD/rgbd_dataset_freiburg3_structure_texture_far -c ./example/tum_rgbd/TUM_RGBD_rgbd_2.yaml
 ```

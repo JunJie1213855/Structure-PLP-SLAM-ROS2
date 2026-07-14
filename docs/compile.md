@@ -104,6 +104,17 @@ make -j$(nproc)
 
 ## 编译 ROS2 包
 
+ROS2 wrapper 位于 `ros2/` 目录，包含三个节点：`mono`（单目）、`rgbd`（RGB-D）、`stereo`（双目）。
+
+### 前提
+
+- ROS2 Humble 已安装并 source
+- PLP-SLAM 核心库已编译（`build/lib/libPLPSLAM.so` 存在）
+- DBoW2 已安装到 `~/.local/`
+- Pangolin v0.6 已在 `3rd/Pangolin/install/`（仓库自带）
+
+### 编译
+
 ```bash
 cd ros2
 source /opt/ros/humble/setup.bash
@@ -112,6 +123,30 @@ colcon build --symlink-install --cmake-args \
     -DDBoW2_DIR=$HOME/.local/lib/cmake/DBoW2 \
     -DPangolin_DIR=$PWD/../3rd/Pangolin/install/lib/cmake/Pangolin \
     -DCMAKE_BUILD_TYPE=Release
+```
+
+编译成功后生成三个可执行文件在 `install/plpslam_ros2/lib/plpslam_ros2/` 下。
+
+### 订阅话题
+
+| 可执行文件 | 话题 | 说明 |
+|-----------|------|------|
+| `mono` | `camera/image_raw` | 单目图像 |
+| `rgbd` | `camera/rgb` + `camera/depth` | 近似时间同步 |
+| `stereo` | `camera/left` + `camera/right` | 近似时间同步 |
+
+### 文件结构
+
+```
+ros2/
+├── CMakeLists.txt
+├── package.xml
+├── include/utility.hpp          # 时间戳转换工具
+├── launch/tum_rgbd_mono.py      # TUM RGB-D launch 示例
+└── src/
+    ├── mono/   (mono.cpp, mono-slam-node.{hpp,cpp})
+    ├── rgbd/   (rgbd.cpp, rgbd-slam-node.{hpp,cpp})
+    └── stereo/ (stereo.cpp, stereo-slam-node.{hpp,cpp})
 ```
 
 ---

@@ -92,7 +92,13 @@ namespace PLPSLAM
         unsigned int map_publisher::get_keyframes(std::vector<data::keyframe *> &all_keyfrms)
         {
             all_keyfrms = map_db_->get_all_keyframes();
-            return map_db_->get_num_keyframes();
+            const auto n = map_db_->get_num_keyframes();
+            static bool once = true;
+            if (once) {
+                spdlog::info("[map_publisher] get_keyframes: {} keyframes in database", n);
+                once = false;
+            }
+            return n;
         }
 
         unsigned int map_publisher::get_landmarks(std::vector<data::landmark *> &all_landmarks,
@@ -101,6 +107,12 @@ namespace PLPSLAM
             all_landmarks = map_db_->get_all_landmarks();
             const auto _local_landmarks = map_db_->get_local_landmarks();
             local_landmarks = std::set<data::landmark *>(_local_landmarks.begin(), _local_landmarks.end());
+            static bool once = true;
+            if (once) {
+                spdlog::info("[map_publisher] get_landmarks: {} total, {} local in database",
+                             map_db_->get_num_landmarks(), local_landmarks.size());
+                once = false;
+            }
             return map_db_->get_num_landmarks();
         }
 
