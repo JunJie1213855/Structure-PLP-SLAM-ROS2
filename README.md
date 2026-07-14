@@ -115,11 +115,10 @@ Notice the version of this documentation is 0.3.9 which should be the correspond
 
 ### Build using CMake:
 
-**Step 1: Install third-party dependencies** (DBoW2 + Pangolin)
+**Step 1: Install third-party dependencies** (DBoW2)
 ```bash
-# See detailed guide: docs/compile.md
-# DBoW2 -> installed to ~/.local/
-# Pangolin v0.6 -> installed to 3rd/Pangolin/install/
+# DBoW2: see docs/compile.md -> installed to ~/.local/
+# Pangolin v0.6: already bundled in 3rd/Pangolin/ (with pre-built install/)
 ```
 
 **Step 2: Build PLP-SLAM**

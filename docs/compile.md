@@ -44,14 +44,15 @@ cmake --install .
 
 > **注意：** 本项目 fork 的 DBoW2 在 `TemplatedVocabulary.h` 中添加了 `saveToBinaryFile()` / `loadFromBinaryFile()` 方法以支持二进制 ORB 词汇文件 `orb_vocab.dbow2`。如果使用原始 DBoW2，需修改 `system.cc` 中 `loadFromBinaryFile` → `load`，并将词汇转为 YAML 格式。
 
-### Pangolin **v0.6**（安装到 `3rd/Pangolin/install/`）
+### Pangolin **v0.6**（`3rd/Pangolin/`，已包含在仓库中）
 
-> **关键：** 必须使用 **v0.6**，不能使用 v0.8+。v0.8 的 `Follow()` 不在每帧更新视图矩阵，会导致可视化异常。
+> **关键：** 必须使用 **v0.6**（仓库已自带），不能使用 v0.8+。v0.8 的 `Follow()` 不在每帧更新视图矩阵，会导致可视化异常。
+
+Pangolin v0.6 源码已包含在 `3rd/Pangolin/` 目录中，预编译的 `install/` 也已在仓库内。如需重新编译：
 
 ```bash
-cd 3rd
-git clone --depth=1 --branch v0.6 https://github.com/stevenlovegrove/Pangolin.git
-mkdir Pangolin/build && cd Pangolin/build
+cd 3rd/Pangolin
+rm -rf build install && mkdir build && cd build
 
 cmake .. \
     -DCMAKE_INSTALL_PREFIX=$PWD/../install \
@@ -65,6 +66,8 @@ cmake .. \
 make -j$(nproc)
 cmake --install .
 ```
+
+> 如果仓库自带的 `install/` 库文件因系统差异无法使用，按上述步骤重新编译即可。
 
 ---
 
