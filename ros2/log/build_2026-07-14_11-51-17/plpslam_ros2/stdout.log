@@ -1,0 +1,33 @@
+[ 11%] Building CXX object CMakeFiles/mono.dir/src/mono/mono.cpp.o
+[ 22%] Building CXX object CMakeFiles/mono.dir/src/mono/mono-slam-node.cpp.o
+[ 33%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd.cpp.o
+[ 55%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo.cpp.o
+[ 55%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o
+[ 66%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o
+[ 77%] Linking CXX executable mono
+[ 77%] Built target mono
+[ 88%] Linking CXX executable rgbd
+[100%] Linking CXX executable stereo
+[100%] Built target rgbd
+[100%] Built target stereo
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/mono
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/rgbd
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/stereo
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/launch/tum_rgbd_mono.py
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/package_run_dependencies/plpslam_ros2
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/parent_prefix_path/plpslam_ros2
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/ament_prefix_path.sh
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/path.sh
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/path.dsv
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.bash
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.sh
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.zsh
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.dsv
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/package.dsv
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/packages/plpslam_ros2
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/cmake/plpslam_ros2Config.cmake
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/cmake/plpslam_ros2Config-version.cmake
+-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/package.xml

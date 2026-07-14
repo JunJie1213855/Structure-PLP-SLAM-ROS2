@@ -1,0 +1,330 @@
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp: In member function ‘void MonoSlamNode::GrabMono(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)’:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43: error: no match for ‘operator=’ (operand types are ‘cv_bridge::CvImagePtr’ {aka ‘std::shared_ptr<cv_bridge::CvImage>’} and ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’})
+   29 |         cv_ptr_ = cv_bridge::toCvShare(msg);
+      |                                           ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<const cv_bridge::CvImage>&; _Tp = cv_bridge::CvImage]’:
+/usr/include/c++/11/bits/shared_ptr.h:363:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = const cv_bridge::CvImage]’
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43:   required from here
+/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>’
+  130 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::auto_ptr<_Up>’
+   29 |         cv_ptr_ = cv_bridge::toCvShare(msg);
+      |                                           ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<const cv_bridge::CvImage>; _Tp = cv_bridge::CvImage]’:
+/usr/include/c++/11/bits/shared_ptr.h:391:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = const cv_bridge::CvImage]’
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43:   required from here
+/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>’
+  130 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   29 |         cv_ptr_ = cv_bridge::toCvShare(msg);
+      |                                           ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘const std::shared_ptr<cv_bridge::CvImage>&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘std::shared_ptr<cv_bridge::CvImage>&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp: In constructor ‘StereoSlamNode::StereoSlamNode(const std::shared_ptr<PLPSLAM::config>&, const string&, bool)’:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:14:9: error: ‘shared_ptr’ was not declared in this scope; did you mean ‘std::shared_ptr’?
+   14 |         shared_ptr<rclcpp::Node>(this), "camera/left");
+      |         ^~~~~~~~~~
+      |         std::shared_ptr
+In file included from /usr/include/c++/11/bits/shared_ptr.h:53,
+                 from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr_base.h:319:11: note: ‘std::shared_ptr’ declared here
+  319 |     class shared_ptr;
+      |           ^~~~~~~~~~
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:14:32: error: expected primary-expression before ‘>’ token
+   14 |         shared_ptr<rclcpp::Node>(this), "camera/left");
+      |                                ^
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:16:32: error: expected primary-expression before ‘>’ token
+   16 |         shared_ptr<rclcpp::Node>(this), "camera/right");
+      |                                ^
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp: In constructor ‘RgbdSlamNode::RgbdSlamNode(const std::shared_ptr<PLPSLAM::config>&, const string&, bool)’:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:14:9: error: ‘shared_ptr’ was not declared in this scope; did you mean ‘std::shared_ptr’?
+   14 |         shared_ptr<rclcpp::Node>(this), "camera/rgb");
+      |         ^~~~~~~~~~
+      |         std::shared_ptr
+In file included from /usr/include/c++/11/bits/shared_ptr.h:53,
+                 from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr_base.h:319:11: note: ‘std::shared_ptr’ declared here
+  319 |     class shared_ptr;
+      |           ^~~~~~~~~~
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:14:32: error: expected primary-expression before ‘>’ token
+   14 |         shared_ptr<rclcpp::Node>(this), "camera/rgb");
+      |                                ^
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:16:32: error: expected primary-expression before ‘>’ token
+   16 |         shared_ptr<rclcpp::Node>(this), "camera/depth");
+      |                                ^
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp: In member function ‘void StereoSlamNode::GrabStereo(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr, sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)’:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51: error: no match for ‘operator=’ (operand types are ‘cv_bridge::CvImagePtr’ {aka ‘std::shared_ptr<cv_bridge::CvImage>’} and ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’})
+   35 |         cv_ptrLeft_ = cv_bridge::toCvShare(msgLeft);
+      |                                                   ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<const cv_bridge::CvImage>&; _Tp = cv_bridge::CvImage]’:
+/usr/include/c++/11/bits/shared_ptr.h:363:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = const cv_bridge::CvImage]’
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51:   required from here
+/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>’
+  130 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::auto_ptr<_Up>’
+   35 |         cv_ptrLeft_ = cv_bridge::toCvShare(msgLeft);
+      |                                                   ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<const cv_bridge::CvImage>; _Tp = cv_bridge::CvImage]’:
+/usr/include/c++/11/bits/shared_ptr.h:391:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = const cv_bridge::CvImage]’
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51:   required from here
+/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>’
+  130 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   35 |         cv_ptrLeft_ = cv_bridge::toCvShare(msgLeft);
+      |                                                   ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘const std::shared_ptr<cv_bridge::CvImage>&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘std::shared_ptr<cv_bridge::CvImage>&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:45:53: error: no match for ‘operator=’ (operand types are ‘cv_bridge::CvImagePtr’ {aka ‘std::shared_ptr<cv_bridge::CvImage>’} and ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’})
+   45 |         cv_ptrRight_ = cv_bridge::toCvShare(msgRight);
+      |                                                     ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:45:53: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::auto_ptr<_Up>’
+   45 |         cv_ptrRight_ = cv_bridge::toCvShare(msgRight);
+      |                                                     ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:45:53: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   45 |         cv_ptrRight_ = cv_bridge::toCvShare(msgRight);
+      |                                                     ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘const std::shared_ptr<cv_bridge::CvImage>&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘std::shared_ptr<cv_bridge::CvImage>&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp: In member function ‘void RgbdSlamNode::GrabRGBD(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr, sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)’:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49: error: no match for ‘operator=’ (operand types are ‘cv_bridge::CvImagePtr’ {aka ‘std::shared_ptr<cv_bridge::CvImage>’} and ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’})
+   35 |         cv_ptrRGB_ = cv_bridge::toCvShare(msgRGB);
+      |                                                 ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<const cv_bridge::CvImage>&; _Tp = cv_bridge::CvImage]’:
+/usr/include/c++/11/bits/shared_ptr.h:363:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = const cv_bridge::CvImage]’
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49:   required from here
+/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>’
+  130 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::auto_ptr<_Up>’
+   35 |         cv_ptrRGB_ = cv_bridge::toCvShare(msgRGB);
+      |                                                 ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h: In substitution of ‘template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<const cv_bridge::CvImage>; _Tp = cv_bridge::CvImage]’:
+/usr/include/c++/11/bits/shared_ptr.h:391:2:   required by substitution of ‘template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = const cv_bridge::CvImage]’
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49:   required from here
+/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named ‘type’ in ‘struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>’
+  130 |         using _Assignable = typename enable_if<
+      |               ^~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   35 |         cv_ptrRGB_ = cv_bridge::toCvShare(msgRGB);
+      |                                                 ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘const std::shared_ptr<cv_bridge::CvImage>&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘std::shared_ptr<cv_bridge::CvImage>&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:45:45: error: no match for ‘operator=’ (operand types are ‘cv_bridge::CvImagePtr’ {aka ‘std::shared_ptr<cv_bridge::CvImage>’} and ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’})
+   45 |         cv_ptrD_ = cv_bridge::toCvShare(msgD);
+      |                                             ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  374 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:45:45: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::auto_ptr<_Up>’
+   45 |         cv_ptrD_ = cv_bridge::toCvShare(msgD);
+      |                                             ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: ‘template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]’
+  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: ‘template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]’
+  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:
+/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:45:45: note:   ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+   45 |         cv_ptrD_ = cv_bridge::toCvShare(msgD);
+      |                                             ^
+In file included from /usr/include/c++/11/memory:77,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,
+                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:
+/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘const std::shared_ptr<cv_bridge::CvImage>&’
+  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: ‘std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from ‘cv_bridge::CvImageConstPtr’ {aka ‘std::shared_ptr<const cv_bridge::CvImage>’} to ‘std::shared_ptr<cv_bridge::CvImage>&&’
+  383 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+gmake[2]: *** [CMakeFiles/stereo.dir/build.make:93：CMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:223：CMakeFiles/stereo.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/rgbd.dir/build.make:93：CMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:191：CMakeFiles/rgbd.dir/all] 错误 2
+gmake[2]: *** [CMakeFiles/mono.dir/build.make:93：CMakeFiles/mono.dir/src/mono/mono-slam-node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:159：CMakeFiles/mono.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

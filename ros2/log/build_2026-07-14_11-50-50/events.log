@@ -1,0 +1,446 @@
+[0.000000] (-) TimerEvent: {}
+[0.003857] (plpslam_ros2) JobQueued: {'identifier': 'plpslam_ros2', 'dependencies': OrderedDict()}
+[0.003936] (plpslam_ros2) JobStarted: {'identifier': 'plpslam_ros2'}
+[0.021040] (plpslam_ros2) JobProgress: {'identifier': 'plpslam_ros2', 'progress': 'cmake'}
+[0.022350] (plpslam_ros2) JobProgress: {'identifier': 'plpslam_ros2', 'progress': 'build'}
+[0.023949] (plpslam_ros2) Command: {'cmd': ['/home/ros/app/cmake-4.4.0/bin/cmake', '--build', '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2', '--', '-j24', '-l24'], 'cwd': '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ANTHROPIC_MODEL', 'deepseek-v4-pro[1m]'), ('TMUX', '/tmp/tmux-1000/default,8486,7'), ('CONDA_PROMPT_MODIFIER', '(ros)'), ('AI_AGENT', 'claude-code_2-1-207_agent'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ros'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('BUN_INSTALL', '/home/ros/.bun'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ros/lib/Deploy/TensorRT-10.9.0.34/lib:/home/ros/lib/Deploy/TensorRT-10.9.0.34/lib:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model/lib:/home/ros/rosws/livox_ws/install/livox_ros2_driver/lib:/home/ros/rosws/livox_ws/install/livox_ros_driver2/lib:/home/ros/rosws/livox_ws/install/livox_ros_driver/lib:/home/ros/rosws/livox_ws/install/livox_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64'), ('HOME', '/home/ros'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/ros/rosws'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ros/.nvm/versions/node/v24.18.0/bin'), ('NVM_INC', '/home/ros/.nvm/versions/node/v24.18.0/include/node'), ('ANTHROPIC_DEFAULT_SONNET_MODEL', 'deepseek-v4-pro[1m]'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('CLAUDE_CODE_CHILD_SESSION', '1'), ('SYSTEMD_EXEC_PID', '3594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/ros/miniconda3'), ('NVM_DIR', '/home/ros/.nvm'), ('COLCON_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install:/home/ros/rosws/livox_ws/install:/home/ros/rosws/PL_VINS_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ros'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros'), ('ANTHROPIC_BASE_URL', 'https://api.deepseek.com/anthropic'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTHROPIC_DEFAULT_OPUS_MODEL', 'deepseek-v4-pro[1m]'), ('PATH', '/home/ros/.local/bin:/home/ros/lib/Deploy/TensorRT-10.9.0.34/bin:/home/ros/app/cmake-4.4.0/bin:/home/ros/.bun/bin:/home/ros/.local/bin:/home/ros/lib/Deploy/TensorRT-10.9.0.34/bin:/home/ros/app/cmake-4.4.0/bin:/home/ros/.bun/bin:/home/ros/.nvm/versions/node/v24.18.0/bin:/home/ros/.local/bin:/opt/ros/humble/bin:/home/ros/miniconda3/envs/ros/bin:/home/ros/miniconda3/condabin:/home/ros/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/cuda-13.0/bin:/usr/local/cuda-13.0/bin:/home/ros/.claude/plugins/cache/thedotmack/claude-mem/13.9.1/bin:/home/ros/.claude/plugins/cache/ecc/ecc/2.0.0/bin:/home/ros/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/bin:/home/ros/.claude/plugins/cache/claude-plugins-official/skill-creator/108f8f429d6e/bin'), ('SESSION_MANAGER', 'local/ros-desktop:@/tmp/.ICE-unix/1948,unix/ros-desktop:/tmp/.ICE-unix/1948'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/79f62f82_f21c_4163_b45e_bfa45ee64cb1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('CLAUDE_EFFORT', 'high'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTHROPIC_DEFAULT_HAIKU_MODEL', 'deepseek-v4-flash'), ('CONDA_PREFIX_1', '/home/ros/miniconda3'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.113'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_sdk:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg:/home/ros/lib/rsviewer/rs_ros_ws/install/rs_to_velodyne:/home/ros/rosws/PL_VINS_ros2_ws/install/sim_data_pub:/home/ros/rosws/PL_VINS_ros2_ws/install/pose_graph:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator:/home/ros/rosws/PL_VINS_ros2_ws/install/image_node_b:/home/ros/rosws/PL_VINS_ros2_ws/install/feature_tracker:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model:/home/ros/rosws/PL_VINS_ros2_ws/install/benchmark_publisher:/home/ros/rosws/livox_ws/install/livox_ros2_driver:/home/ros/rosws/livox_ws/install/livox_sdk_vendor:/home/ros/rosws/livox_ws/install/livox_ros_driver2:/home/ros/rosws/livox_ws/install/livox_ros_driver:/home/ros/rosws/livox_ws/install/livox_interfaces:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/ros/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('ANTHROPIC_AUTH_TOKEN', 'sk-2e8a62f9819f417ca4ea81fe93c6819c'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('CLAUDE_CODE_SESSION_ID', 'f2cae172-c5d4-4862-8d73-dffa2c34d4ca'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'ros'), ('CLAUDECODE', '1'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/ros/miniconda3/bin/conda'), ('ANTHROPIC_REASONING_MODEL', 'deepseek-v4-pro[1m]'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/ros/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/ros/.local/share/claude/versions/2.1.207'), ('PYTHONPATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg/lib/python3.10/site-packages:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces/lib/python3.10/site-packages:/home/ros/rosws/livox_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/home/ros/rosws/livox_ws/install/livox_ros_driver/lib/python3.10/site-packages:/home/ros/rosws/livox_ws/install/livox_interfaces/local/lib/python3.10/dist-packages:/home/ros/rosws/livox_ws/install/livox_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CONDA_PREFIX', '/home/ros/miniconda3/envs/ros'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%19'), ('CMAKE_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_sdk:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg:/home/ros/lib/rsviewer/rs_ros_ws/install/rs_to_velodyne:/home/ros/rosws/PL_VINS_ros2_ws/install/sim_data_pub:/home/ros/rosws/PL_VINS_ros2_ws/install/pose_graph:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator:/home/ros/rosws/PL_VINS_ros2_ws/install/image_node_b:/home/ros/rosws/PL_VINS_ros2_ws/install/feature_tracker:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model:/home/ros/rosws/PL_VINS_ros2_ws/install/benchmark_publisher:/home/ros/rosws/livox_ws/install/livox_ros2_driver:/home/ros/rosws/livox_ws/install/livox_sdk_vendor:/home/ros/rosws/livox_ws/install/livox_ros_driver2:/home/ros/rosws/livox_ws/install/livox_ros_driver:/home/ros/rosws/livox_ws/install/livox_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.085223] (plpslam_ros2) StdoutLine: {'line': b'[ 11%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o\n'}
+[0.087904] (plpslam_ros2) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o\n'}
+[0.091805] (plpslam_ros2) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/mono.dir/src/mono/mono-slam-node.cpp.o\n'}
+[0.099281] (-) TimerEvent: {}
+[0.201845] (-) TimerEvent: {}
+[0.303869] (-) TimerEvent: {}
+[0.404101] (-) TimerEvent: {}
+[0.504337] (-) TimerEvent: {}
+[0.605885] (-) TimerEvent: {}
+[0.706173] (-) TimerEvent: {}
+[0.806443] (-) TimerEvent: {}
+[0.910054] (-) TimerEvent: {}
+[1.010300] (-) TimerEvent: {}
+[1.110533] (-) TimerEvent: {}
+[1.210751] (-) TimerEvent: {}
+[1.311091] (-) TimerEvent: {}
+[1.411328] (-) TimerEvent: {}
+[1.511561] (-) TimerEvent: {}
+[1.611807] (-) TimerEvent: {}
+[1.715773] (-) TimerEvent: {}
+[1.816039] (-) TimerEvent: {}
+[1.916370] (-) TimerEvent: {}
+[2.016604] (-) TimerEvent: {}
+[2.116852] (-) TimerEvent: {}
+[2.217103] (-) TimerEvent: {}
+[2.317336] (-) TimerEvent: {}
+[2.417558] (-) TimerEvent: {}
+[2.517800] (-) TimerEvent: {}
+[2.618018] (-) TimerEvent: {}
+[2.718274] (-) TimerEvent: {}
+[2.818526] (-) TimerEvent: {}
+[2.921830] (-) TimerEvent: {}
+[3.022092] (-) TimerEvent: {}
+[3.122439] (-) TimerEvent: {}
+[3.222668] (-) TimerEvent: {}
+[3.322923] (-) TimerEvent: {}
+[3.423201] (-) TimerEvent: {}
+[3.523456] (-) TimerEvent: {}
+[3.623687] (-) TimerEvent: {}
+[3.723952] (-) TimerEvent: {}
+[3.824224] (-) TimerEvent: {}
+[3.924498] (-) TimerEvent: {}
+[4.024751] (-) TimerEvent: {}
+[4.124984] (-) TimerEvent: {}
+[4.225209] (-) TimerEvent: {}
+[4.325447] (-) TimerEvent: {}
+[4.425653] (-) TimerEvent: {}
+[4.525850] (-) TimerEvent: {}
+[4.626072] (-) TimerEvent: {}
+[4.727117] (-) TimerEvent: {}
+[4.827366] (-) TimerEvent: {}
+[4.927611] (-) TimerEvent: {}
+[5.027894] (-) TimerEvent: {}
+[5.128107] (-) TimerEvent: {}
+[5.228347] (-) TimerEvent: {}
+[5.328583] (-) TimerEvent: {}
+[5.428793] (-) TimerEvent: {}
+[5.529037] (-) TimerEvent: {}
+[5.629260] (-) TimerEvent: {}
+[5.729477] (-) TimerEvent: {}
+[5.829716] (-) TimerEvent: {}
+[5.929951] (-) TimerEvent: {}
+[6.030213] (-) TimerEvent: {}
+[6.130435] (-) TimerEvent: {}
+[6.231038] (-) TimerEvent: {}
+[6.331286] (-) TimerEvent: {}
+[6.431520] (-) TimerEvent: {}
+[6.531745] (-) TimerEvent: {}
+[6.631991] (-) TimerEvent: {}
+[6.653958] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp: In member function \xe2\x80\x98void MonoSlamNode::GrabMono(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)\xe2\x80\x99:\n'}
+[6.654354] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43: error: no match for \xe2\x80\x98operator=\xe2\x80\x99 (operand types are \xe2\x80\x98cv_bridge::CvImagePtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>\xe2\x80\x99} and \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99})\n'}
+[6.654516] (plpslam_ros2) StderrLine: {'line': b'   29 |         cv_ptr_ = cv_bridge::toCvShare(msg);\n'}
+[6.654659] (plpslam_ros2) StderrLine: {'line': b'      |                                           ^\n'}
+[6.654816] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.654966] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.655106] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.hpp:4,\n'}
+[6.655242] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:1:\n'}
+[6.655377] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.655518] (plpslam_ros2) StderrLine: {'line': b'  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept\n'}
+[6.655656] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.655803] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:\n'}
+[6.655947] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h: In substitution of \xe2\x80\x98template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<const cv_bridge::CvImage>&; _Tp = cv_bridge::CvImage]\xe2\x80\x99:\n'}
+[6.656088] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:2:   required by substitution of \xe2\x80\x98template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = const cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.656225] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43:   required from here\n'}
+[6.656361] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named \xe2\x80\x98type\xe2\x80\x99 in \xe2\x80\x98struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>\xe2\x80\x99\n'}
+[6.656502] (plpslam_ros2) StderrLine: {'line': b'  130 |         using _Assignable = typename enable_if<\n'}
+[6.656637] (plpslam_ros2) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[6.656784] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.656933] (plpslam_ros2) StderrLine: {'line': b'  374 |         operator=(auto_ptr<_Yp>&& __r)\n'}
+[6.657066] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.657199] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:\n'}
+[6.657333] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::auto_ptr<_Up>\xe2\x80\x99\n'}
+[6.657490] (plpslam_ros2) StderrLine: {'line': b'   29 |         cv_ptr_ = cv_bridge::toCvShare(msg);\n'}
+[6.657633] (plpslam_ros2) StderrLine: {'line': b'      |                                           ^\n'}
+[6.657774] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.657919] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.658053] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.hpp:4,\n'}
+[6.658201] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:1:\n'}
+[6.658336] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.658471] (plpslam_ros2) StderrLine: {'line': b'  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept\n'}
+[6.658603] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.658732] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:\n'}
+[6.658883] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h: In substitution of \xe2\x80\x98template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<const cv_bridge::CvImage>; _Tp = cv_bridge::CvImage]\xe2\x80\x99:\n'}
+[6.659057] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:2:   required by substitution of \xe2\x80\x98template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = const cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.659191] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43:   required from here\n'}
+[6.659322] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named \xe2\x80\x98type\xe2\x80\x99 in \xe2\x80\x98struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>\xe2\x80\x99\n'}
+[6.659450] (plpslam_ros2) StderrLine: {'line': b'  130 |         using _Assignable = typename enable_if<\n'}
+[6.659577] (plpslam_ros2) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[6.659708] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: \xe2\x80\x98template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.659864] (plpslam_ros2) StderrLine: {'line': b'  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)\n'}
+[6.659995] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.660126] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:\n'}
+[6.660258] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:29:43: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::unique_ptr<_Tp, _Dp>\xe2\x80\x99\n'}
+[6.660387] (plpslam_ros2) StderrLine: {'line': b'   29 |         cv_ptr_ = cv_bridge::toCvShare(msg);\n'}
+[6.660528] (plpslam_ros2) StderrLine: {'line': b'      |                                           ^\n'}
+[6.660653] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.660789] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.660932] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.hpp:4,\n'}
+[6.661057] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/mono/mono-slam-node.cpp:1:\n'}
+[6.661183] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.661317] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[6.661446] (plpslam_ros2) StderrLine: {'line': b'      |                   ^~~~~~~~\n'}
+[6.661569] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98const std::shared_ptr<cv_bridge::CvImage>&\xe2\x80\x99\n'}
+[6.661697] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[6.661842] (plpslam_ros2) StderrLine: {'line': b'      |                             ^~~~~~~~~~~~~~~~~\n'}
+[6.661982] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.662109] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[6.662233] (plpslam_ros2) StderrLine: {'line': b'      |       ^~~~~~~~\n'}
+[6.662356] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>&&\xe2\x80\x99\n'}
+[6.662483] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[6.662620] (plpslam_ros2) StderrLine: {'line': b'      |                 ~~~~~~~~~~~~~^~~\n'}
+[6.732235] (-) TimerEvent: {}
+[6.753003] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp: In constructor \xe2\x80\x98StereoSlamNode::StereoSlamNode(const std::shared_ptr<PLPSLAM::config>&, const string&, bool)\xe2\x80\x99:\n'}
+[6.753349] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:14:9: error: \xe2\x80\x98shared_ptr\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98std::shared_ptr\xe2\x80\x99?\n'}
+[6.753522] (plpslam_ros2) StderrLine: {'line': b'   14 |         shared_ptr<rclcpp::Node>(this), "camera/left");\n'}
+[6.753680] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~~~\n'}
+[6.753873] (plpslam_ros2) StderrLine: {'line': b'      |         std::shared_ptr\n'}
+[6.754023] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/bits/shared_ptr.h:53,\n'}
+[6.754151] (plpslam_ros2) StderrLine: {'line': b'                 from /usr/include/c++/11/memory:77,\n'}
+[6.754274] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.754397] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.754519] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.754678] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr_base.h:319:11: note: \xe2\x80\x98std::shared_ptr\xe2\x80\x99 declared here\n'}
+[6.754839] (plpslam_ros2) StderrLine: {'line': b'  319 |     class shared_ptr;\n'}
+[6.754969] (plpslam_ros2) StderrLine: {'line': b'      |           ^~~~~~~~~~\n'}
+[6.755134] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:14:32: error: expected primary-expression before \xe2\x80\x98>\xe2\x80\x99 token\n'}
+[6.755265] (plpslam_ros2) StderrLine: {'line': b'   14 |         shared_ptr<rclcpp::Node>(this), "camera/left");\n'}
+[6.755399] (plpslam_ros2) StderrLine: {'line': b'      |                                ^\n'}
+[6.755526] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:16:32: error: expected primary-expression before \xe2\x80\x98>\xe2\x80\x99 token\n'}
+[6.755653] (plpslam_ros2) StderrLine: {'line': b'   16 |         shared_ptr<rclcpp::Node>(this), "camera/right");\n'}
+[6.755797] (plpslam_ros2) StderrLine: {'line': b'      |                                ^\n'}
+[6.832411] (-) TimerEvent: {}
+[6.888248] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp: In constructor \xe2\x80\x98RgbdSlamNode::RgbdSlamNode(const std::shared_ptr<PLPSLAM::config>&, const string&, bool)\xe2\x80\x99:\n'}
+[6.888479] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:14:9: error: \xe2\x80\x98shared_ptr\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98std::shared_ptr\xe2\x80\x99?\n'}
+[6.888638] (plpslam_ros2) StderrLine: {'line': b'   14 |         shared_ptr<rclcpp::Node>(this), "camera/rgb");\n'}
+[6.888788] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~~~\n'}
+[6.888884] (plpslam_ros2) StderrLine: {'line': b'      |         std::shared_ptr\n'}
+[6.888991] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/bits/shared_ptr.h:53,\n'}
+[6.889132] (plpslam_ros2) StderrLine: {'line': b'                 from /usr/include/c++/11/memory:77,\n'}
+[6.889239] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.889320] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[6.889447] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[6.889580] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr_base.h:319:11: note: \xe2\x80\x98std::shared_ptr\xe2\x80\x99 declared here\n'}
+[6.889690] (plpslam_ros2) StderrLine: {'line': b'  319 |     class shared_ptr;\n'}
+[6.889857] (plpslam_ros2) StderrLine: {'line': b'      |           ^~~~~~~~~~\n'}
+[6.889953] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:14:32: error: expected primary-expression before \xe2\x80\x98>\xe2\x80\x99 token\n'}
+[6.890081] (plpslam_ros2) StderrLine: {'line': b'   14 |         shared_ptr<rclcpp::Node>(this), "camera/rgb");\n'}
+[6.890217] (plpslam_ros2) StderrLine: {'line': b'      |                                ^\n'}
+[6.890332] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:16:32: error: expected primary-expression before \xe2\x80\x98>\xe2\x80\x99 token\n'}
+[6.890473] (plpslam_ros2) StderrLine: {'line': b'   16 |         shared_ptr<rclcpp::Node>(this), "camera/depth");\n'}
+[6.890560] (plpslam_ros2) StderrLine: {'line': b'      |                                ^\n'}
+[6.932532] (-) TimerEvent: {}
+[6.954811] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp: In member function \xe2\x80\x98void StereoSlamNode::GrabStereo(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr, sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)\xe2\x80\x99:\n'}
+[6.955523] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51: error: no match for \xe2\x80\x98operator=\xe2\x80\x99 (operand types are \xe2\x80\x98cv_bridge::CvImagePtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>\xe2\x80\x99} and \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99})\n'}
+[6.955691] (plpslam_ros2) StderrLine: {'line': b'   35 |         cv_ptrLeft_ = cv_bridge::toCvShare(msgLeft);\n'}
+[6.955901] (plpslam_ros2) StderrLine: {'line': b'      |                                                   ^\n'}
+[6.956052] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.956925] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.957027] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.957128] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.957207] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.957291] (plpslam_ros2) StderrLine: {'line': b'  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept\n'}
+[6.957365] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.957449] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:\n'}
+[6.957583] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h: In substitution of \xe2\x80\x98template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<const cv_bridge::CvImage>&; _Tp = cv_bridge::CvImage]\xe2\x80\x99:\n'}
+[6.957733] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:2:   required by substitution of \xe2\x80\x98template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = const cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.957944] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51:   required from here\n'}
+[6.958119] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named \xe2\x80\x98type\xe2\x80\x99 in \xe2\x80\x98struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>\xe2\x80\x99\n'}
+[6.958277] (plpslam_ros2) StderrLine: {'line': b'  130 |         using _Assignable = typename enable_if<\n'}
+[6.958449] (plpslam_ros2) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[6.958615] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.958791] (plpslam_ros2) StderrLine: {'line': b'  374 |         operator=(auto_ptr<_Yp>&& __r)\n'}
+[6.958964] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.959068] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:\n'}
+[6.959164] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::auto_ptr<_Up>\xe2\x80\x99\n'}
+[6.959242] (plpslam_ros2) StderrLine: {'line': b'   35 |         cv_ptrLeft_ = cv_bridge::toCvShare(msgLeft);\n'}
+[6.959371] (plpslam_ros2) StderrLine: {'line': b'      |                                                   ^\n'}
+[6.959505] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.959637] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.959781] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.959947] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.960095] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.960180] (plpslam_ros2) StderrLine: {'line': b'  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept\n'}
+[6.960257] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.960331] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:\n'}
+[6.960405] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h: In substitution of \xe2\x80\x98template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<const cv_bridge::CvImage>; _Tp = cv_bridge::CvImage]\xe2\x80\x99:\n'}
+[6.960483] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:2:   required by substitution of \xe2\x80\x98template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = const cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.960573] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51:   required from here\n'}
+[6.960650] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named \xe2\x80\x98type\xe2\x80\x99 in \xe2\x80\x98struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>\xe2\x80\x99\n'}
+[6.960724] (plpslam_ros2) StderrLine: {'line': b'  130 |         using _Assignable = typename enable_if<\n'}
+[6.960844] (plpslam_ros2) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[6.960925] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: \xe2\x80\x98template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.961001] (plpslam_ros2) StderrLine: {'line': b'  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)\n'}
+[6.961074] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.961146] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:\n'}
+[6.961219] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:35:51: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::unique_ptr<_Tp, _Dp>\xe2\x80\x99\n'}
+[6.961314] (plpslam_ros2) StderrLine: {'line': b'   35 |         cv_ptrLeft_ = cv_bridge::toCvShare(msgLeft);\n'}
+[6.961387] (plpslam_ros2) StderrLine: {'line': b'      |                                                   ^\n'}
+[6.961460] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.961532] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.961605] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.961690] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.961780] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.961887] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[6.961965] (plpslam_ros2) StderrLine: {'line': b'      |                   ^~~~~~~~\n'}
+[6.962038] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98const std::shared_ptr<cv_bridge::CvImage>&\xe2\x80\x99\n'}
+[6.962113] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[6.962185] (plpslam_ros2) StderrLine: {'line': b'      |                             ^~~~~~~~~~~~~~~~~\n'}
+[6.962257] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.962331] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[6.962403] (plpslam_ros2) StderrLine: {'line': b'      |       ^~~~~~~~\n'}
+[6.962475] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>&&\xe2\x80\x99\n'}
+[6.962608] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[6.962735] (plpslam_ros2) StderrLine: {'line': b'      |                 ~~~~~~~~~~~~~^~~\n'}
+[6.962833] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:45:53: error: no match for \xe2\x80\x98operator=\xe2\x80\x99 (operand types are \xe2\x80\x98cv_bridge::CvImagePtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>\xe2\x80\x99} and \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99})\n'}
+[6.962952] (plpslam_ros2) StderrLine: {'line': b'   45 |         cv_ptrRight_ = cv_bridge::toCvShare(msgRight);\n'}
+[6.963029] (plpslam_ros2) StderrLine: {'line': b'      |                                                     ^\n'}
+[6.963108] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.963181] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.963254] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.963327] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.963399] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.963532] (plpslam_ros2) StderrLine: {'line': b'  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept\n'}
+[6.963669] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.963748] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:\n'}
+[6.963857] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.963938] (plpslam_ros2) StderrLine: {'line': b'  374 |         operator=(auto_ptr<_Yp>&& __r)\n'}
+[6.964011] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.964084] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:\n'}
+[6.964157] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:45:53: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::auto_ptr<_Up>\xe2\x80\x99\n'}
+[6.964232] (plpslam_ros2) StderrLine: {'line': b'   45 |         cv_ptrRight_ = cv_bridge::toCvShare(msgRight);\n'}
+[6.964304] (plpslam_ros2) StderrLine: {'line': b'      |                                                     ^\n'}
+[6.964378] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.964451] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.964524] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.964597] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.964670] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.964744] (plpslam_ros2) StderrLine: {'line': b'  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept\n'}
+[6.964854] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.964934] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:\n'}
+[6.965028] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: \xe2\x80\x98template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.965116] (plpslam_ros2) StderrLine: {'line': b'  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)\n'}
+[6.965190] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[6.965263] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:\n'}
+[6.965336] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:45:53: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::unique_ptr<_Tp, _Dp>\xe2\x80\x99\n'}
+[6.965421] (plpslam_ros2) StderrLine: {'line': b'   45 |         cv_ptrRight_ = cv_bridge::toCvShare(msgRight);\n'}
+[6.965494] (plpslam_ros2) StderrLine: {'line': b'      |                                                     ^\n'}
+[6.965566] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[6.965638] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[6.965711] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.hpp:4,\n'}
+[6.965810] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/stereo/stereo-slam-node.cpp:1:\n'}
+[6.965895] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.965972] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[6.966045] (plpslam_ros2) StderrLine: {'line': b'      |                   ^~~~~~~~\n'}
+[6.966119] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98const std::shared_ptr<cv_bridge::CvImage>&\xe2\x80\x99\n'}
+[6.966194] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[6.966266] (plpslam_ros2) StderrLine: {'line': b'      |                             ^~~~~~~~~~~~~~~~~\n'}
+[6.966338] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[6.966422] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[6.966499] (plpslam_ros2) StderrLine: {'line': b'      |       ^~~~~~~~\n'}
+[6.966572] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>&&\xe2\x80\x99\n'}
+[6.966649] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[6.966721] (plpslam_ros2) StderrLine: {'line': b'      |                 ~~~~~~~~~~~~~^~~\n'}
+[7.032653] (-) TimerEvent: {}
+[7.080881] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp: In member function \xe2\x80\x98void RgbdSlamNode::GrabRGBD(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr, sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)\xe2\x80\x99:\n'}
+[7.081377] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49: error: no match for \xe2\x80\x98operator=\xe2\x80\x99 (operand types are \xe2\x80\x98cv_bridge::CvImagePtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>\xe2\x80\x99} and \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99})\n'}
+[7.081479] (plpslam_ros2) StderrLine: {'line': b'   35 |         cv_ptrRGB_ = cv_bridge::toCvShare(msgRGB);\n'}
+[7.081571] (plpslam_ros2) StderrLine: {'line': b'      |                                                 ^\n'}
+[7.081653] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[7.081734] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[7.081838] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[7.082658] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[7.082772] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.083471] (plpslam_ros2) StderrLine: {'line': b'  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept\n'}
+[7.083560] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.083639] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:\n'}
+[7.083716] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h: In substitution of \xe2\x80\x98template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<const cv_bridge::CvImage>&; _Tp = cv_bridge::CvImage]\xe2\x80\x99:\n'}
+[7.083837] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:2:   required by substitution of \xe2\x80\x98template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = const cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.083952] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49:   required from here\n'}
+[7.084032] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named \xe2\x80\x98type\xe2\x80\x99 in \xe2\x80\x98struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>\xe2\x80\x99\n'}
+[7.084109] (plpslam_ros2) StderrLine: {'line': b'  130 |         using _Assignable = typename enable_if<\n'}
+[7.084184] (plpslam_ros2) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[7.084258] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.084347] (plpslam_ros2) StderrLine: {'line': b'  374 |         operator=(auto_ptr<_Yp>&& __r)\n'}
+[7.084426] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.084499] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:\n'}
+[7.084573] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::auto_ptr<_Up>\xe2\x80\x99\n'}
+[7.084663] (plpslam_ros2) StderrLine: {'line': b'   35 |         cv_ptrRGB_ = cv_bridge::toCvShare(msgRGB);\n'}
+[7.084835] (plpslam_ros2) StderrLine: {'line': b'      |                                                 ^\n'}
+[7.084929] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[7.085023] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[7.085100] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[7.085185] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[7.085260] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.085347] (plpslam_ros2) StderrLine: {'line': b'  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept\n'}
+[7.085422] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.085494] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:\n'}
+[7.085567] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h: In substitution of \xe2\x80\x98template<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<const cv_bridge::CvImage>; _Tp = cv_bridge::CvImage]\xe2\x80\x99:\n'}
+[7.085644] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:2:   required by substitution of \xe2\x80\x98template<class _Yp> std::shared_ptr<cv_bridge::CvImage>::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<cv_bridge::CvImage>::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = const cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.085720] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49:   required from here\n'}
+[7.085829] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:130:15: error: no type named \xe2\x80\x98type\xe2\x80\x99 in \xe2\x80\x98struct std::enable_if<false, std::shared_ptr<cv_bridge::CvImage>&>\xe2\x80\x99\n'}
+[7.085910] (plpslam_ros2) StderrLine: {'line': b'  130 |         using _Assignable = typename enable_if<\n'}
+[7.085984] (plpslam_ros2) StderrLine: {'line': b'      |               ^~~~~~~~~~~\n'}
+[7.086055] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: \xe2\x80\x98template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.086128] (plpslam_ros2) StderrLine: {'line': b'  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)\n'}
+[7.086199] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.086270] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:\n'}
+[7.086343] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:35:49: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::unique_ptr<_Tp, _Dp>\xe2\x80\x99\n'}
+[7.086464] (plpslam_ros2) StderrLine: {'line': b'   35 |         cv_ptrRGB_ = cv_bridge::toCvShare(msgRGB);\n'}
+[7.086608] (plpslam_ros2) StderrLine: {'line': b'      |                                                 ^\n'}
+[7.086732] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[7.086881] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[7.087372] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[7.087511] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[7.087636] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.087785] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[7.087941] (plpslam_ros2) StderrLine: {'line': b'      |                   ^~~~~~~~\n'}
+[7.088065] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98const std::shared_ptr<cv_bridge::CvImage>&\xe2\x80\x99\n'}
+[7.088188] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[7.088307] (plpslam_ros2) StderrLine: {'line': b'      |                             ^~~~~~~~~~~~~~~~~\n'}
+[7.088423] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.088541] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[7.088659] (plpslam_ros2) StderrLine: {'line': b'      |       ^~~~~~~~\n'}
+[7.088750] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>&&\xe2\x80\x99\n'}
+[7.088862] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[7.088942] (plpslam_ros2) StderrLine: {'line': b'      |                 ~~~~~~~~~~~~~^~~\n'}
+[7.089035] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:45:45: error: no match for \xe2\x80\x98operator=\xe2\x80\x99 (operand types are \xe2\x80\x98cv_bridge::CvImagePtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>\xe2\x80\x99} and \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99})\n'}
+[7.089116] (plpslam_ros2) StderrLine: {'line': b'   45 |         cv_ptrD_ = cv_bridge::toCvShare(msgD);\n'}
+[7.089190] (plpslam_ros2) StderrLine: {'line': b'      |                                             ^\n'}
+[7.089263] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[7.089336] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[7.089421] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[7.089498] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[7.089569] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.089643] (plpslam_ros2) StderrLine: {'line': b'  363 |         operator=(const shared_ptr<_Yp>& __r) noexcept\n'}
+[7.089718] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.089812] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:363:9: note:   template argument deduction/substitution failed:\n'}
+[7.089892] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.089966] (plpslam_ros2) StderrLine: {'line': b'  374 |         operator=(auto_ptr<_Yp>&& __r)\n'}
+[7.090039] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.090121] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:374:9: note:   template argument deduction/substitution failed:\n'}
+[7.090206] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:45:45: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::auto_ptr<_Up>\xe2\x80\x99\n'}
+[7.090280] (plpslam_ros2) StderrLine: {'line': b'   45 |         cv_ptrD_ = cv_bridge::toCvShare(msgD);\n'}
+[7.090352] (plpslam_ros2) StderrLine: {'line': b'      |                                             ^\n'}
+[7.090422] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[7.090493] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[7.090601] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[7.090713] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[7.090848] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note: candidate: \xe2\x80\x98template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.090971] (plpslam_ros2) StderrLine: {'line': b'  391 |         operator=(shared_ptr<_Yp>&& __r) noexcept\n'}
+[7.091095] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.091209] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:391:9: note:   template argument deduction/substitution failed:\n'}
+[7.091353] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note: candidate: \xe2\x80\x98template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.091487] (plpslam_ros2) StderrLine: {'line': b'  399 |         operator=(unique_ptr<_Yp, _Del>&& __r)\n'}
+[7.091604] (plpslam_ros2) StderrLine: {'line': b'      |         ^~~~~~~~\n'}
+[7.091718] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:399:9: note:   template argument deduction/substitution failed:\n'}
+[7.091857] (plpslam_ros2) StderrLine: {'line': b'/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:45:45: note:   \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} is not derived from \xe2\x80\x98std::unique_ptr<_Tp, _Dp>\xe2\x80\x99\n'}
+[7.091989] (plpslam_ros2) StderrLine: {'line': b'   45 |         cv_ptrD_ = cv_bridge::toCvShare(msgD);\n'}
+[7.092106] (plpslam_ros2) StderrLine: {'line': b'      |                                             ^\n'}
+[7.092217] (plpslam_ros2) StderrLine: {'line': b'In file included from /usr/include/c++/11/memory:77,\n'}
+[7.092327] (plpslam_ros2) StderrLine: {'line': b'                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153,\n'}
+[7.092436] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.hpp:4,\n'}
+[7.092574] (plpslam_ros2) StderrLine: {'line': b'                 from /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/src/rgbd/rgbd-slam-node.cpp:1:\n'}
+[7.092691] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:19: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.094017] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[7.094458] (plpslam_ros2) StderrLine: {'line': b'      |                   ^~~~~~~~\n'}
+[7.094589] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:359:29: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98const std::shared_ptr<cv_bridge::CvImage>&\xe2\x80\x99\n'}
+[7.094732] (plpslam_ros2) StderrLine: {'line': b'  359 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;\n'}
+[7.094872] (plpslam_ros2) StderrLine: {'line': b'      |                             ^~~~~~~~~~~~~~~~~\n'}
+[7.094991] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:7: note: candidate: \xe2\x80\x98std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cv_bridge::CvImage]\xe2\x80\x99\n'}
+[7.095107] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[7.095222] (plpslam_ros2) StderrLine: {'line': b'      |       ^~~~~~~~\n'}
+[7.095334] (plpslam_ros2) StderrLine: {'line': b'/usr/include/c++/11/bits/shared_ptr.h:383:30: note:   no known conversion for argument 1 from \xe2\x80\x98cv_bridge::CvImageConstPtr\xe2\x80\x99 {aka \xe2\x80\x98std::shared_ptr<const cv_bridge::CvImage>\xe2\x80\x99} to \xe2\x80\x98std::shared_ptr<cv_bridge::CvImage>&&\xe2\x80\x99\n'}
+[7.095450] (plpslam_ros2) StderrLine: {'line': b'  383 |       operator=(shared_ptr&& __r) noexcept\n'}
+[7.095564] (plpslam_ros2) StderrLine: {'line': b'      |                 ~~~~~~~~~~~~~^~~\n'}
+[7.132770] (-) TimerEvent: {}
+[7.233003] (-) TimerEvent: {}
+[7.333241] (-) TimerEvent: {}
+[7.433498] (-) TimerEvent: {}
+[7.533704] (-) TimerEvent: {}
+[7.633932] (-) TimerEvent: {}
+[7.734226] (-) TimerEvent: {}
+[7.834532] (-) TimerEvent: {}
+[7.934814] (-) TimerEvent: {}
+[8.035036] (-) TimerEvent: {}
+[8.135245] (-) TimerEvent: {}
+[8.235476] (-) TimerEvent: {}
+[8.335795] (-) TimerEvent: {}
+[8.436032] (-) TimerEvent: {}
+[8.536290] (-) TimerEvent: {}
+[8.636848] (-) TimerEvent: {}
+[8.737114] (-) TimerEvent: {}
+[8.837356] (-) TimerEvent: {}
+[8.863702] (plpslam_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/stereo.dir/build.make:93\xef\xbc\x9aCMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[8.864151] (plpslam_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:223\xef\xbc\x9aCMakeFiles/stereo.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[8.864252] (plpslam_ros2) StderrLine: {'line': b'gmake[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[8.937482] (-) TimerEvent: {}
+[9.037706] (-) TimerEvent: {}
+[9.085666] (plpslam_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/rgbd.dir/build.make:93\xef\xbc\x9aCMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[9.086024] (plpslam_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:191\xef\xbc\x9aCMakeFiles/rgbd.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[9.137866] (-) TimerEvent: {}
+[9.238120] (-) TimerEvent: {}
+[9.338315] (-) TimerEvent: {}
+[9.438549] (-) TimerEvent: {}
+[9.538810] (-) TimerEvent: {}
+[9.639043] (-) TimerEvent: {}
+[9.739261] (-) TimerEvent: {}
+[9.839534] (-) TimerEvent: {}
+[9.939774] (-) TimerEvent: {}
+[10.040023] (-) TimerEvent: {}
+[10.140249] (-) TimerEvent: {}
+[10.240490] (-) TimerEvent: {}
+[10.340718] (-) TimerEvent: {}
+[10.440927] (-) TimerEvent: {}
+[10.477056] (plpslam_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/mono.dir/build.make:93\xef\xbc\x9aCMakeFiles/mono.dir/src/mono/mono-slam-node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[10.477438] (plpslam_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:159\xef\xbc\x9aCMakeFiles/mono.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[10.477736] (plpslam_ros2) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[10.479838] (plpslam_ros2) CommandEnded: {'returncode': 2}
+[10.496980] (plpslam_ros2) JobEnded: {'identifier': 'plpslam_ros2', 'rc': 2}
+[10.507710] (-) EventReactorShutdown: {}

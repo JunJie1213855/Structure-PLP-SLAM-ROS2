@@ -1,0 +1,338 @@
+[0.000000] (-) TimerEvent: {}
+[0.000203] (plpslam_ros2) JobQueued: {'identifier': 'plpslam_ros2', 'dependencies': OrderedDict()}
+[0.000503] (plpslam_ros2) JobStarted: {'identifier': 'plpslam_ros2'}
+[0.015049] (plpslam_ros2) JobProgress: {'identifier': 'plpslam_ros2', 'progress': 'cmake'}
+[0.015889] (plpslam_ros2) JobProgress: {'identifier': 'plpslam_ros2', 'progress': 'build'}
+[0.016802] (plpslam_ros2) Command: {'cmd': ['/home/ros/app/cmake-4.4.0/bin/cmake', '--build', '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2', '--', '-j24', '-l24'], 'cwd': '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ANTHROPIC_MODEL', 'deepseek-v4-pro[1m]'), ('TMUX', '/tmp/tmux-1000/default,8486,7'), ('CONDA_PROMPT_MODIFIER', '(ros)'), ('AI_AGENT', 'claude-code_2-1-207_agent'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ros'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('BUN_INSTALL', '/home/ros/.bun'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ros/lib/Deploy/TensorRT-10.9.0.34/lib:/home/ros/lib/Deploy/TensorRT-10.9.0.34/lib:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model/lib:/home/ros/rosws/livox_ws/install/livox_ros2_driver/lib:/home/ros/rosws/livox_ws/install/livox_ros_driver2/lib:/home/ros/rosws/livox_ws/install/livox_ros_driver/lib:/home/ros/rosws/livox_ws/install/livox_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64'), ('HOME', '/home/ros'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/ros/rosws'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ros/.nvm/versions/node/v24.18.0/bin'), ('NVM_INC', '/home/ros/.nvm/versions/node/v24.18.0/include/node'), ('ANTHROPIC_DEFAULT_SONNET_MODEL', 'deepseek-v4-pro[1m]'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('CLAUDE_CODE_CHILD_SESSION', '1'), ('SYSTEMD_EXEC_PID', '3594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/ros/miniconda3'), ('NVM_DIR', '/home/ros/.nvm'), ('COLCON_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install:/home/ros/rosws/livox_ws/install:/home/ros/rosws/PL_VINS_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ros'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros'), ('ANTHROPIC_BASE_URL', 'https://api.deepseek.com/anthropic'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTHROPIC_DEFAULT_OPUS_MODEL', 'deepseek-v4-pro[1m]'), ('PATH', '/home/ros/.local/bin:/home/ros/lib/Deploy/TensorRT-10.9.0.34/bin:/home/ros/app/cmake-4.4.0/bin:/home/ros/.bun/bin:/home/ros/.local/bin:/home/ros/lib/Deploy/TensorRT-10.9.0.34/bin:/home/ros/app/cmake-4.4.0/bin:/home/ros/.bun/bin:/home/ros/.nvm/versions/node/v24.18.0/bin:/home/ros/.local/bin:/opt/ros/humble/bin:/home/ros/miniconda3/envs/ros/bin:/home/ros/miniconda3/condabin:/home/ros/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/cuda-13.0/bin:/usr/local/cuda-13.0/bin:/home/ros/.claude/plugins/cache/thedotmack/claude-mem/13.9.1/bin:/home/ros/.claude/plugins/cache/ecc/ecc/2.0.0/bin:/home/ros/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/bin:/home/ros/.claude/plugins/cache/claude-plugins-official/skill-creator/108f8f429d6e/bin'), ('SESSION_MANAGER', 'local/ros-desktop:@/tmp/.ICE-unix/1948,unix/ros-desktop:/tmp/.ICE-unix/1948'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/79f62f82_f21c_4163_b45e_bfa45ee64cb1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('CLAUDE_EFFORT', 'high'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTHROPIC_DEFAULT_HAIKU_MODEL', 'deepseek-v4-flash'), ('CONDA_PREFIX_1', '/home/ros/miniconda3'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.113'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_sdk:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg:/home/ros/lib/rsviewer/rs_ros_ws/install/rs_to_velodyne:/home/ros/rosws/PL_VINS_ros2_ws/install/sim_data_pub:/home/ros/rosws/PL_VINS_ros2_ws/install/pose_graph:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator:/home/ros/rosws/PL_VINS_ros2_ws/install/image_node_b:/home/ros/rosws/PL_VINS_ros2_ws/install/feature_tracker:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model:/home/ros/rosws/PL_VINS_ros2_ws/install/benchmark_publisher:/home/ros/rosws/livox_ws/install/livox_ros2_driver:/home/ros/rosws/livox_ws/install/livox_sdk_vendor:/home/ros/rosws/livox_ws/install/livox_ros_driver2:/home/ros/rosws/livox_ws/install/livox_ros_driver:/home/ros/rosws/livox_ws/install/livox_interfaces:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/ros/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('ANTHROPIC_AUTH_TOKEN', 'sk-2e8a62f9819f417ca4ea81fe93c6819c'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('CLAUDE_CODE_SESSION_ID', 'f2cae172-c5d4-4862-8d73-dffa2c34d4ca'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'ros'), ('CLAUDECODE', '1'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/ros/miniconda3/bin/conda'), ('ANTHROPIC_REASONING_MODEL', 'deepseek-v4-pro[1m]'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/ros/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/ros/.local/share/claude/versions/2.1.207'), ('PYTHONPATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg/lib/python3.10/site-packages:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces/lib/python3.10/site-packages:/home/ros/rosws/livox_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/home/ros/rosws/livox_ws/install/livox_ros_driver/lib/python3.10/site-packages:/home/ros/rosws/livox_ws/install/livox_interfaces/local/lib/python3.10/dist-packages:/home/ros/rosws/livox_ws/install/livox_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CONDA_PREFIX', '/home/ros/miniconda3/envs/ros'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%19'), ('CMAKE_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_sdk:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg:/home/ros/lib/rsviewer/rs_ros_ws/install/rs_to_velodyne:/home/ros/rosws/PL_VINS_ros2_ws/install/sim_data_pub:/home/ros/rosws/PL_VINS_ros2_ws/install/pose_graph:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator:/home/ros/rosws/PL_VINS_ros2_ws/install/image_node_b:/home/ros/rosws/PL_VINS_ros2_ws/install/feature_tracker:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model:/home/ros/rosws/PL_VINS_ros2_ws/install/benchmark_publisher:/home/ros/rosws/livox_ws/install/livox_ros2_driver:/home/ros/rosws/livox_ws/install/livox_sdk_vendor:/home/ros/rosws/livox_ws/install/livox_ros_driver2:/home/ros/rosws/livox_ws/install/livox_ros_driver:/home/ros/rosws/livox_ws/install/livox_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.094448] (plpslam_ros2) StdoutLine: {'line': b'[ 11%] Building CXX object CMakeFiles/mono.dir/src/mono/mono.cpp.o\n'}
+[0.096765] (plpslam_ros2) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/mono.dir/src/mono/mono-slam-node.cpp.o\n'}
+[0.097193] (plpslam_ros2) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd.cpp.o\n'}
+[0.097805] (plpslam_ros2) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo.cpp.o\n'}
+[0.097962] (plpslam_ros2) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o\n'}
+[0.099521] (-) TimerEvent: {}
+[0.099774] (plpslam_ros2) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o\n'}
+[0.200646] (-) TimerEvent: {}
+[0.300889] (-) TimerEvent: {}
+[0.401468] (-) TimerEvent: {}
+[0.501676] (-) TimerEvent: {}
+[0.601930] (-) TimerEvent: {}
+[0.702127] (-) TimerEvent: {}
+[0.802629] (-) TimerEvent: {}
+[0.902882] (-) TimerEvent: {}
+[1.003222] (-) TimerEvent: {}
+[1.103602] (-) TimerEvent: {}
+[1.203873] (-) TimerEvent: {}
+[1.304112] (-) TimerEvent: {}
+[1.404341] (-) TimerEvent: {}
+[1.504586] (-) TimerEvent: {}
+[1.604792] (-) TimerEvent: {}
+[1.705010] (-) TimerEvent: {}
+[1.805316] (-) TimerEvent: {}
+[1.905600] (-) TimerEvent: {}
+[2.005873] (-) TimerEvent: {}
+[2.106157] (-) TimerEvent: {}
+[2.206444] (-) TimerEvent: {}
+[2.306647] (-) TimerEvent: {}
+[2.406897] (-) TimerEvent: {}
+[2.507103] (-) TimerEvent: {}
+[2.607329] (-) TimerEvent: {}
+[2.707601] (-) TimerEvent: {}
+[2.807819] (-) TimerEvent: {}
+[2.908051] (-) TimerEvent: {}
+[3.009770] (-) TimerEvent: {}
+[3.112763] (-) TimerEvent: {}
+[3.213011] (-) TimerEvent: {}
+[3.313280] (-) TimerEvent: {}
+[3.416099] (-) TimerEvent: {}
+[3.516670] (-) TimerEvent: {}
+[3.616934] (-) TimerEvent: {}
+[3.717181] (-) TimerEvent: {}
+[3.818651] (-) TimerEvent: {}
+[3.918925] (-) TimerEvent: {}
+[4.019180] (-) TimerEvent: {}
+[4.119908] (-) TimerEvent: {}
+[4.220158] (-) TimerEvent: {}
+[4.320398] (-) TimerEvent: {}
+[4.421086] (-) TimerEvent: {}
+[4.521429] (-) TimerEvent: {}
+[4.621636] (-) TimerEvent: {}
+[4.721903] (-) TimerEvent: {}
+[4.822167] (-) TimerEvent: {}
+[4.922419] (-) TimerEvent: {}
+[5.022649] (-) TimerEvent: {}
+[5.122872] (-) TimerEvent: {}
+[5.223090] (-) TimerEvent: {}
+[5.323339] (-) TimerEvent: {}
+[5.423601] (-) TimerEvent: {}
+[5.523820] (-) TimerEvent: {}
+[5.624049] (-) TimerEvent: {}
+[5.724317] (-) TimerEvent: {}
+[5.824604] (-) TimerEvent: {}
+[5.924914] (-) TimerEvent: {}
+[6.025171] (-) TimerEvent: {}
+[6.125446] (-) TimerEvent: {}
+[6.225773] (-) TimerEvent: {}
+[6.326012] (-) TimerEvent: {}
+[6.426247] (-) TimerEvent: {}
+[6.526507] (-) TimerEvent: {}
+[6.626779] (-) TimerEvent: {}
+[6.727107] (-) TimerEvent: {}
+[6.827426] (-) TimerEvent: {}
+[6.927661] (-) TimerEvent: {}
+[7.027942] (-) TimerEvent: {}
+[7.128261] (-) TimerEvent: {}
+[7.228521] (-) TimerEvent: {}
+[7.328902] (-) TimerEvent: {}
+[7.429234] (-) TimerEvent: {}
+[7.529504] (-) TimerEvent: {}
+[7.629751] (-) TimerEvent: {}
+[7.730106] (-) TimerEvent: {}
+[7.830474] (-) TimerEvent: {}
+[7.930795] (-) TimerEvent: {}
+[8.031102] (-) TimerEvent: {}
+[8.131439] (-) TimerEvent: {}
+[8.233857] (-) TimerEvent: {}
+[8.334110] (-) TimerEvent: {}
+[8.434382] (-) TimerEvent: {}
+[8.537705] (-) TimerEvent: {}
+[8.637959] (-) TimerEvent: {}
+[8.738207] (-) TimerEvent: {}
+[8.838472] (-) TimerEvent: {}
+[8.938752] (-) TimerEvent: {}
+[9.041809] (-) TimerEvent: {}
+[9.142070] (-) TimerEvent: {}
+[9.242323] (-) TimerEvent: {}
+[9.342598] (-) TimerEvent: {}
+[9.442962] (-) TimerEvent: {}
+[9.544644] (-) TimerEvent: {}
+[9.644924] (-) TimerEvent: {}
+[9.745214] (-) TimerEvent: {}
+[9.846678] (-) TimerEvent: {}
+[9.946965] (-) TimerEvent: {}
+[10.047223] (-) TimerEvent: {}
+[10.147448] (-) TimerEvent: {}
+[10.247633] (-) TimerEvent: {}
+[10.347849] (-) TimerEvent: {}
+[10.448369] (-) TimerEvent: {}
+[10.551002] (-) TimerEvent: {}
+[10.651250] (-) TimerEvent: {}
+[10.751486] (-) TimerEvent: {}
+[10.851720] (-) TimerEvent: {}
+[10.951948] (-) TimerEvent: {}
+[11.052184] (-) TimerEvent: {}
+[11.152661] (-) TimerEvent: {}
+[11.252917] (-) TimerEvent: {}
+[11.353201] (-) TimerEvent: {}
+[11.453479] (-) TimerEvent: {}
+[11.554004] (-) TimerEvent: {}
+[11.654247] (-) TimerEvent: {}
+[11.754449] (-) TimerEvent: {}
+[11.854639] (-) TimerEvent: {}
+[11.954872] (-) TimerEvent: {}
+[12.055124] (-) TimerEvent: {}
+[12.155333] (-) TimerEvent: {}
+[12.255534] (-) TimerEvent: {}
+[12.357615] (-) TimerEvent: {}
+[12.457832] (-) TimerEvent: {}
+[12.558049] (-) TimerEvent: {}
+[12.659245] (-) TimerEvent: {}
+[12.765657] (-) TimerEvent: {}
+[12.865904] (-) TimerEvent: {}
+[12.966145] (-) TimerEvent: {}
+[13.066394] (-) TimerEvent: {}
+[13.166655] (-) TimerEvent: {}
+[13.272641] (-) TimerEvent: {}
+[13.372896] (-) TimerEvent: {}
+[13.473148] (-) TimerEvent: {}
+[13.573383] (-) TimerEvent: {}
+[13.673621] (-) TimerEvent: {}
+[13.774013] (-) TimerEvent: {}
+[13.875668] (-) TimerEvent: {}
+[13.975938] (-) TimerEvent: {}
+[14.076197] (-) TimerEvent: {}
+[14.176431] (-) TimerEvent: {}
+[14.277673] (-) TimerEvent: {}
+[14.378652] (-) TimerEvent: {}
+[14.478915] (-) TimerEvent: {}
+[14.579660] (-) TimerEvent: {}
+[14.679921] (-) TimerEvent: {}
+[14.780167] (-) TimerEvent: {}
+[14.880402] (-) TimerEvent: {}
+[14.980663] (-) TimerEvent: {}
+[15.081334] (-) TimerEvent: {}
+[15.181607] (-) TimerEvent: {}
+[15.281838] (-) TimerEvent: {}
+[15.382044] (-) TimerEvent: {}
+[15.482249] (-) TimerEvent: {}
+[15.582481] (-) TimerEvent: {}
+[15.682760] (-) TimerEvent: {}
+[15.783077] (-) TimerEvent: {}
+[15.883310] (-) TimerEvent: {}
+[15.983549] (-) TimerEvent: {}
+[16.083841] (-) TimerEvent: {}
+[16.184093] (-) TimerEvent: {}
+[16.284356] (-) TimerEvent: {}
+[16.385641] (-) TimerEvent: {}
+[16.485886] (-) TimerEvent: {}
+[16.586091] (-) TimerEvent: {}
+[16.686304] (-) TimerEvent: {}
+[16.786551] (-) TimerEvent: {}
+[16.886820] (-) TimerEvent: {}
+[16.987061] (-) TimerEvent: {}
+[17.087312] (-) TimerEvent: {}
+[17.187553] (-) TimerEvent: {}
+[17.287776] (-) TimerEvent: {}
+[17.388026] (-) TimerEvent: {}
+[17.488275] (-) TimerEvent: {}
+[17.588483] (-) TimerEvent: {}
+[17.688708] (-) TimerEvent: {}
+[17.788891] (-) TimerEvent: {}
+[17.889111] (-) TimerEvent: {}
+[17.989327] (-) TimerEvent: {}
+[18.089612] (-) TimerEvent: {}
+[18.189885] (-) TimerEvent: {}
+[18.290134] (-) TimerEvent: {}
+[18.390377] (-) TimerEvent: {}
+[18.490676] (-) TimerEvent: {}
+[18.590946] (-) TimerEvent: {}
+[18.691167] (-) TimerEvent: {}
+[18.791626] (-) TimerEvent: {}
+[18.891874] (-) TimerEvent: {}
+[18.992149] (-) TimerEvent: {}
+[19.092410] (-) TimerEvent: {}
+[19.192651] (-) TimerEvent: {}
+[19.292898] (-) TimerEvent: {}
+[19.393216] (-) TimerEvent: {}
+[19.493495] (-) TimerEvent: {}
+[19.593716] (-) TimerEvent: {}
+[19.694044] (-) TimerEvent: {}
+[19.794307] (-) TimerEvent: {}
+[19.894635] (-) TimerEvent: {}
+[19.994885] (-) TimerEvent: {}
+[20.095091] (-) TimerEvent: {}
+[20.195334] (-) TimerEvent: {}
+[20.295586] (-) TimerEvent: {}
+[20.395836] (-) TimerEvent: {}
+[20.496144] (-) TimerEvent: {}
+[20.596428] (-) TimerEvent: {}
+[20.696640] (-) TimerEvent: {}
+[20.796864] (-) TimerEvent: {}
+[20.897104] (-) TimerEvent: {}
+[20.997328] (-) TimerEvent: {}
+[21.097602] (-) TimerEvent: {}
+[21.197900] (-) TimerEvent: {}
+[21.298171] (-) TimerEvent: {}
+[21.385353] (plpslam_ros2) StdoutLine: {'line': b'[ 77%] Linking CXX executable mono\n'}
+[21.398277] (-) TimerEvent: {}
+[21.498502] (-) TimerEvent: {}
+[21.598761] (-) TimerEvent: {}
+[21.698992] (-) TimerEvent: {}
+[21.799221] (-) TimerEvent: {}
+[21.899440] (-) TimerEvent: {}
+[21.999677] (-) TimerEvent: {}
+[22.099960] (-) TimerEvent: {}
+[22.200222] (-) TimerEvent: {}
+[22.202328] (plpslam_ros2) StdoutLine: {'line': b'[ 77%] Built target mono\n'}
+[22.300350] (-) TimerEvent: {}
+[22.400595] (-) TimerEvent: {}
+[22.500825] (-) TimerEvent: {}
+[22.601033] (-) TimerEvent: {}
+[22.701268] (-) TimerEvent: {}
+[22.801512] (-) TimerEvent: {}
+[22.901729] (-) TimerEvent: {}
+[23.001956] (-) TimerEvent: {}
+[23.102186] (-) TimerEvent: {}
+[23.202424] (-) TimerEvent: {}
+[23.302659] (-) TimerEvent: {}
+[23.402892] (-) TimerEvent: {}
+[23.503172] (-) TimerEvent: {}
+[23.603420] (-) TimerEvent: {}
+[23.703709] (-) TimerEvent: {}
+[23.803920] (-) TimerEvent: {}
+[23.904184] (-) TimerEvent: {}
+[24.004409] (-) TimerEvent: {}
+[24.104621] (-) TimerEvent: {}
+[24.204860] (-) TimerEvent: {}
+[24.305133] (-) TimerEvent: {}
+[24.405361] (-) TimerEvent: {}
+[24.505607] (-) TimerEvent: {}
+[24.605812] (-) TimerEvent: {}
+[24.706018] (-) TimerEvent: {}
+[24.806239] (-) TimerEvent: {}
+[24.906462] (-) TimerEvent: {}
+[25.006673] (-) TimerEvent: {}
+[25.106965] (-) TimerEvent: {}
+[25.207192] (-) TimerEvent: {}
+[25.307440] (-) TimerEvent: {}
+[25.407709] (-) TimerEvent: {}
+[25.507944] (-) TimerEvent: {}
+[25.608163] (-) TimerEvent: {}
+[25.708439] (-) TimerEvent: {}
+[25.808708] (-) TimerEvent: {}
+[25.908944] (-) TimerEvent: {}
+[26.009174] (-) TimerEvent: {}
+[26.109402] (-) TimerEvent: {}
+[26.209653] (-) TimerEvent: {}
+[26.309926] (-) TimerEvent: {}
+[26.410183] (-) TimerEvent: {}
+[26.510422] (-) TimerEvent: {}
+[26.610632] (-) TimerEvent: {}
+[26.710834] (-) TimerEvent: {}
+[26.811086] (-) TimerEvent: {}
+[26.911344] (-) TimerEvent: {}
+[27.011610] (-) TimerEvent: {}
+[27.111857] (-) TimerEvent: {}
+[27.212103] (-) TimerEvent: {}
+[27.312322] (-) TimerEvent: {}
+[27.412573] (-) TimerEvent: {}
+[27.512864] (-) TimerEvent: {}
+[27.613099] (-) TimerEvent: {}
+[27.713312] (-) TimerEvent: {}
+[27.813554] (-) TimerEvent: {}
+[27.913852] (-) TimerEvent: {}
+[28.014088] (-) TimerEvent: {}
+[28.114295] (-) TimerEvent: {}
+[28.214518] (-) TimerEvent: {}
+[28.314732] (-) TimerEvent: {}
+[28.373803] (plpslam_ros2) StdoutLine: {'line': b'[ 88%] Linking CXX executable rgbd\n'}
+[28.414855] (-) TimerEvent: {}
+[28.424704] (plpslam_ros2) StdoutLine: {'line': b'[100%] Linking CXX executable stereo\n'}
+[28.514947] (-) TimerEvent: {}
+[28.615176] (-) TimerEvent: {}
+[28.715378] (-) TimerEvent: {}
+[28.815622] (-) TimerEvent: {}
+[28.915830] (-) TimerEvent: {}
+[29.016075] (-) TimerEvent: {}
+[29.116375] (-) TimerEvent: {}
+[29.215904] (plpslam_ros2) StdoutLine: {'line': b'[100%] Built target rgbd\n'}
+[29.216418] (-) TimerEvent: {}
+[29.300554] (plpslam_ros2) StdoutLine: {'line': b'[100%] Built target stereo\n'}
+[29.306990] (plpslam_ros2) CommandEnded: {'returncode': 0}
+[29.308741] (plpslam_ros2) JobProgress: {'identifier': 'plpslam_ros2', 'progress': 'install'}
+[29.313235] (plpslam_ros2) Command: {'cmd': ['/home/ros/app/cmake-4.4.0/bin/cmake', '--install', '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2'], 'cwd': '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ANTHROPIC_MODEL', 'deepseek-v4-pro[1m]'), ('TMUX', '/tmp/tmux-1000/default,8486,7'), ('CONDA_PROMPT_MODIFIER', '(ros)'), ('AI_AGENT', 'claude-code_2-1-207_agent'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'ros'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('BUN_INSTALL', '/home/ros/.bun'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ros/lib/Deploy/TensorRT-10.9.0.34/lib:/home/ros/lib/Deploy/TensorRT-10.9.0.34/lib:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces/lib:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model/lib:/home/ros/rosws/livox_ws/install/livox_ros2_driver/lib:/home/ros/rosws/livox_ws/install/livox_ros_driver2/lib:/home/ros/rosws/livox_ws/install/livox_ros_driver/lib:/home/ros/rosws/livox_ws/install/livox_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64'), ('HOME', '/home/ros'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/ros/rosws'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ros/.nvm/versions/node/v24.18.0/bin'), ('NVM_INC', '/home/ros/.nvm/versions/node/v24.18.0/include/node'), ('ANTHROPIC_DEFAULT_SONNET_MODEL', 'deepseek-v4-pro[1m]'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('CLAUDE_CODE_CHILD_SESSION', '1'), ('SYSTEMD_EXEC_PID', '3594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/ros/miniconda3'), ('NVM_DIR', '/home/ros/.nvm'), ('COLCON_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install:/home/ros/rosws/livox_ws/install:/home/ros/rosws/PL_VINS_ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ros'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros'), ('ANTHROPIC_BASE_URL', 'https://api.deepseek.com/anthropic'), ('TERM', 'screen-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('ANTHROPIC_DEFAULT_OPUS_MODEL', 'deepseek-v4-pro[1m]'), ('PATH', '/home/ros/.local/bin:/home/ros/lib/Deploy/TensorRT-10.9.0.34/bin:/home/ros/app/cmake-4.4.0/bin:/home/ros/.bun/bin:/home/ros/.local/bin:/home/ros/lib/Deploy/TensorRT-10.9.0.34/bin:/home/ros/app/cmake-4.4.0/bin:/home/ros/.bun/bin:/home/ros/.nvm/versions/node/v24.18.0/bin:/home/ros/.local/bin:/opt/ros/humble/bin:/home/ros/miniconda3/envs/ros/bin:/home/ros/miniconda3/condabin:/home/ros/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/cuda-13.0/bin:/usr/local/cuda-13.0/bin:/home/ros/.claude/plugins/cache/thedotmack/claude-mem/13.9.1/bin:/home/ros/.claude/plugins/cache/ecc/ecc/2.0.0/bin:/home/ros/.claude/plugins/cache/claude-plugins-official/superpowers/6.1.1/bin:/home/ros/.claude/plugins/cache/claude-plugins-official/skill-creator/108f8f429d6e/bin'), ('SESSION_MANAGER', 'local/ros-desktop:@/tmp/.ICE-unix/1948,unix/ros-desktop:/tmp/.ICE-unix/1948'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/79f62f82_f21c_4163_b45e_bfa45ee64cb1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('CLAUDE_EFFORT', 'high'), ('DISPLAY', ':0'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('ANTHROPIC_DEFAULT_HAIKU_MODEL', 'deepseek-v4-flash'), ('CONDA_PREFIX_1', '/home/ros/miniconda3'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.113'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_sdk:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg:/home/ros/lib/rsviewer/rs_ros_ws/install/rs_to_velodyne:/home/ros/rosws/PL_VINS_ros2_ws/install/sim_data_pub:/home/ros/rosws/PL_VINS_ros2_ws/install/pose_graph:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator:/home/ros/rosws/PL_VINS_ros2_ws/install/image_node_b:/home/ros/rosws/PL_VINS_ros2_ws/install/feature_tracker:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model:/home/ros/rosws/PL_VINS_ros2_ws/install/benchmark_publisher:/home/ros/rosws/livox_ws/install/livox_ros2_driver:/home/ros/rosws/livox_ws/install/livox_sdk_vendor:/home/ros/rosws/livox_ws/install/livox_ros_driver2:/home/ros/rosws/livox_ws/install/livox_ros_driver:/home/ros/rosws/livox_ws/install/livox_interfaces:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/ros/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('ANTHROPIC_AUTH_TOKEN', 'sk-2e8a62f9819f417ca4ea81fe93c6819c'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('CLAUDE_CODE_SESSION_ID', 'f2cae172-c5d4-4862-8d73-dffa2c34d4ca'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'ros'), ('CLAUDECODE', '1'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/ros/miniconda3/bin/conda'), ('ANTHROPIC_REASONING_MODEL', 'deepseek-v4-pro[1m]'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/ros/miniconda3/bin/conda'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLAUDE_CODE_EXECPATH', '/home/ros/.local/share/claude/versions/2.1.207'), ('PYTHONPATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg/lib/python3.10/site-packages:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces/lib/python3.10/site-packages:/home/ros/rosws/livox_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/home/ros/rosws/livox_ws/install/livox_ros_driver/lib/python3.10/site-packages:/home/ros/rosws/livox_ws/install/livox_interfaces/local/lib/python3.10/dist-packages:/home/ros/rosws/livox_ws/install/livox_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CONDA_PREFIX', '/home/ros/miniconda3/envs/ros'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%19'), ('CMAKE_PREFIX_PATH', '/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_sdk:/home/ros/lib/rsviewer/rs_ros_ws/install/rslidar_msg:/home/ros/lib/rsviewer/rs_ros_ws/install/rs_to_velodyne:/home/ros/rosws/PL_VINS_ros2_ws/install/sim_data_pub:/home/ros/rosws/PL_VINS_ros2_ws/install/pose_graph:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_estimator:/home/ros/rosws/PL_VINS_ros2_ws/install/image_node_b:/home/ros/rosws/PL_VINS_ros2_ws/install/feature_tracker:/home/ros/rosws/PL_VINS_ros2_ws/install/plvins_interfaces:/home/ros/rosws/PL_VINS_ros2_ws/install/camera_model:/home/ros/rosws/PL_VINS_ros2_ws/install/benchmark_publisher:/home/ros/rosws/livox_ws/install/livox_ros2_driver:/home/ros/rosws/livox_ws/install/livox_sdk_vendor:/home/ros/rosws/livox_ws/install/livox_ros_driver2:/home/ros/rosws/livox_ws/install/livox_ros_driver:/home/ros/rosws/livox_ws/install/livox_interfaces:/opt/ros/humble')]), 'shell': False}
+[29.316513] (-) TimerEvent: {}
+[29.317154] (plpslam_ros2) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[29.317703] (plpslam_ros2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[29.318131] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/mono\n'}
+[29.322721] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/rgbd\n'}
+[29.327012] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/stereo\n'}
+[29.331682] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/launch/tum_rgbd_mono.py\n'}
+[29.341677] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/package_run_dependencies/plpslam_ros2\n'}
+[29.347495] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/parent_prefix_path/plpslam_ros2\n'}
+[29.351629] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/ament_prefix_path.sh\n'}
+[29.355278] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/ament_prefix_path.dsv\n'}
+[29.359418] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/path.sh\n'}
+[29.369681] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/path.dsv\n'}
+[29.377302] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.bash\n'}
+[29.381110] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.sh\n'}
+[29.384627] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.zsh\n'}
+[29.388398] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.dsv\n'}
+[29.392214] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/package.dsv\n'}
+[29.397336] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/packages/plpslam_ros2\n'}
+[29.401314] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/cmake/plpslam_ros2Config.cmake\n'}
+[29.405011] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/cmake/plpslam_ros2Config-version.cmake\n'}
+[29.408742] (plpslam_ros2) StdoutLine: {'line': b'-- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/package.xml\n'}
+[29.413855] (plpslam_ros2) CommandEnded: {'returncode': 0}
+[29.416612] (-) TimerEvent: {}
+[29.444523] (plpslam_ros2) JobEnded: {'identifier': 'plpslam_ros2', 'rc': 0}
+[29.445297] (-) EventReactorShutdown: {}

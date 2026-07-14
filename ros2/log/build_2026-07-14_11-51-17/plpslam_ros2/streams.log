@@ -1,0 +1,37 @@
+[0.018s] Invoking command in '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros) /home/ros/app/cmake-4.4.0/bin/cmake --build /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2 -- -j24 -l24
+[0.094s] [ 11%] Building CXX object CMakeFiles/mono.dir/src/mono/mono.cpp.o
+[0.096s] [ 22%] Building CXX object CMakeFiles/mono.dir/src/mono/mono-slam-node.cpp.o
+[0.097s] [ 33%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd.cpp.o
+[0.097s] [ 55%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo.cpp.o
+[0.097s] [ 55%] Building CXX object CMakeFiles/rgbd.dir/src/rgbd/rgbd-slam-node.cpp.o
+[0.099s] [ 66%] Building CXX object CMakeFiles/stereo.dir/src/stereo/stereo-slam-node.cpp.o
+[21.385s] [ 77%] Linking CXX executable mono
+[22.202s] [ 77%] Built target mono
+[28.373s] [ 88%] Linking CXX executable rgbd
+[28.424s] [100%] Linking CXX executable stereo
+[29.215s] [100%] Built target rgbd
+[29.300s] [100%] Built target stereo
+[29.307s] Invoked command in '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros) /home/ros/app/cmake-4.4.0/bin/cmake --build /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2 -- -j24 -l24
+[29.313s] Invoking command in '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros) /home/ros/app/cmake-4.4.0/bin/cmake --install /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2
+[29.317s] -- Install configuration: "Release"
+[29.317s] -- Execute custom install script
+[29.318s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/mono
+[29.322s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/rgbd
+[29.326s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/lib/plpslam_ros2/stereo
+[29.331s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/launch/tum_rgbd_mono.py
+[29.341s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/package_run_dependencies/plpslam_ros2
+[29.347s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/parent_prefix_path/plpslam_ros2
+[29.351s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/ament_prefix_path.sh
+[29.355s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/ament_prefix_path.dsv
+[29.359s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/path.sh
+[29.369s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/environment/path.dsv
+[29.377s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.bash
+[29.381s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.sh
+[29.384s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.zsh
+[29.388s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/local_setup.dsv
+[29.392s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/package.dsv
+[29.397s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/ament_index/resource_index/packages/plpslam_ros2
+[29.401s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/cmake/plpslam_ros2Config.cmake
+[29.404s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/cmake/plpslam_ros2Config-version.cmake
+[29.408s] -- Symlinking: /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/install/plpslam_ros2/share/plpslam_ros2/package.xml
+[29.414s] Invoked command in '/home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros) /home/ros/app/cmake-4.4.0/bin/cmake --install /home/ros/lib/SLAM/VIO/Structure-PLP-SLAM/ros2/build/plpslam_ros2
