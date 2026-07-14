@@ -85,17 +85,29 @@ Notice the version of this documentation is 0.3.9 which should be the correspond
 
 ### Dependencies:
 
-* For utilizing line segment (LSD + LBD): we develop the code using OpenCV 3.4.6, in which we restored the implementation of **LSD** because it was removed. Hence, if you use OpenCV 3+, you may need to restore the LSD code yourself. 
+* **Ubuntu 22.04** / 20.04 / 18.04
 
-    **However, later version of OpenCV restored the LSD (e.g. OpenCV 3.4.16 should work).**
+* **OpenCV 4.5+** (tested with OpenCV 4.5.4 on Ubuntu 22.04)
 
-* Other dependencies (g2o, Eigen3, Pangolin, DBoW2, Ubuntu 18.04) are in general similar to ORB-SLAM2.
+* **Eigen3** >= 3.3
 
-* We integrated **Graph-Cut RANSAC** C++ implementation to our project, which is under BSD license. See https://github.com/danini/graph-cut-ransac.
+* **g2o**: `sudo apt install ros-humble-libg2o` (ROS2 Humble) or build from source
 
-* This project does **not** support using **ROS** and **Docker**, at least we haven't tested, for now.
+* **Pangolin v0.6**: for visualization (see [compile guide](docs/compile.md))
 
-* An additional plane detector:
+* **DBoW2**: for bag-of-words loop detection (see [compile guide](docs/compile.md))
+
+* **yaml-cpp**: `sudo apt install libyaml-cpp-dev`
+
+* **SuiteSparse + CXSparse**: `sudo apt install libsuitesparse-dev libcxsparse-dev`
+
+* **Graph-Cut RANSAC** (bundled in `src/PLPSLAM/solve/GCRANSAC/`, BSD license)
+
+* For line segment (LSD + LBD): OpenCV 3.4+ includes LSD. This project uses `cv::line_descriptor` from OpenCV contrib.
+
+* **ROS2 Humble** support: see [ros2/](ros2/) directory and [compile guide](docs/compile.md)
+
+* An additional plane detector (optional, for Point-Line-Plane SLAM):
 
     This work take PlaneRecNet [3] as the instance planar segmentation CNN (only instance segmentation is used, predicted depth is not used by far). Example segmentation images for different datasets will be provided with a downloading link, see section below -> **Run Point-Plane SLAM**.
 
@@ -103,26 +115,35 @@ Notice the version of this documentation is 0.3.9 which should be the correspond
 
 ### Build using CMake:
 
+**Step 1: Install third-party dependencies** (DBoW2 + Pangolin)
+```bash
+# See detailed guide: docs/compile.md
+# DBoW2 -> installed to ~/.local/
+# Pangolin v0.6 -> installed to 3rd/Pangolin/install/
 ```
+
+**Step 2: Build PLP-SLAM**
+```bash
 mkdir build && cd build
 
 cmake \
-    -DBUILD_WITH_MARCH_NATIVE=ON \
+    -DDBoW2_DIR=$HOME/.local/lib/cmake/DBoW2 \
+    -DPangolin_DIR=$PWD/../3rd/Pangolin/install/lib/cmake/Pangolin \
+    -DCMAKE_BUILD_TYPE=Release \
     -DUSE_PANGOLIN_VIEWER=ON \
-    -DUSE_SOCKET_PUBLISHER=OFF \
-    -DUSE_STACK_TRACE_LOGGER=ON \
-    -DBOW_FRAMEWORK=DBoW2 \
-    -DBUILD_TESTS=OFF \
+    -DBUILD_EXAMPLES=ON \
     ..
 
-make -j4
+make -j$(nproc)
 ```
 
-(or, highlight and filter (gcc) compiler messages)
+**Run:**
+```bash
+export LD_LIBRARY_PATH=$PWD/build/lib:$PWD/3rd/Pangolin/install/lib:$HOME/.local/lib:$LD_LIBRARY_PATH
+./build/run_tum_rgbd_slam -v ./orb_vocab/orb_vocab.dbow2 -d /path/to/dataset -c ./example/tum_rgbd/TUM_RGBD_mono_1.yaml
 ```
-make -j4 2>&1 | grep --color -iP "\^|warning:|error:|"
-make -j4 2>&1 | grep --color -iP "\^|error:|"
-```
+
+> Detailed run commands for all datasets and sensor modes: **[docs/example.md](docs/example.md)**
 
 ### Command options to run the example code on standard dataset, e.g. TUM-RGBD:
 
@@ -142,11 +163,14 @@ Allowed options:
 ```
 
 ## Known Issues
-* If you have a crash right after running SLAM (e.g. a segmentation error), try to de-activate **BUILD_WITH_MARCH NATIVE** (in **ccmake .**). This is due to the wrong version of g2o.
-    
-    **You could find my version of g2o and DBoW in the link:** https://1drv.ms/u/s!Atj7rBR0X5zagZwcFs1oIqXeV5r4Cw?e=pbnNES
 
-* Visualization issue if you are running latest Ubuntu 20 or 22. As this codebase was developed with Ubuntu 18. When you run the code, the camera maybe not following the tracking path, see: https://github.com/PeterFWS/Structure-PLP-SLAM/issues/8
+* **Pangolin visualization**: Must use **Pangolin v0.6** (not v0.8+). v0.8 changed `Follow()` to only update on state transition, breaking continuous camera tracking. See [compile guide](docs/compile.md).
+
+* **OpenCV 4.x**: `CV_INTER_LINEAR` renamed to `cv::INTER_LINEAR`. The fix is applied in this fork.
+
+* **CMake CMP0052**: `install(EXPORT)` rejects source-dir paths in `INTERFACE_INCLUDE_DIRECTORIES`. Set `CMP0052 OLD` in CMakeLists.txt (already applied).
+
+* **g2o version**: If crash occurs right after starting SLAM, try deactivating `-DBUILD_WITH_MARCH_NATIVE=OFF`. See [original author's g2o/DBoW2](https://1drv.ms/u/s!Atj7rBR0X5zagZwcFs1oIqXeV5r4Cw?e=pbnNES).
 
 
 ## Standard SLAM with Standard Datasets
@@ -177,6 +201,33 @@ Allowed options:
 -d /data/EuRoC_MAV/MH_01_easy/mav0 \
 -c ./example/euroc/EuRoC_mono.yaml
 ```
+## ROS2 Support
+
+This project now includes a ROS2 Humble wrapper package. See **[ros2/](ros2/)** for source code.
+
+**Build:**
+```bash
+cd ros2
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install --cmake-args     -DDBoW2_DIR=$HOME/.local/lib/cmake/DBoW2     -DPangolin_DIR=$PWD/../3rd/Pangolin/install/lib/cmake/Pangolin     -DCMAKE_BUILD_TYPE=Release
+```
+
+**Run:**
+```bash
+source install/setup.bash
+ros2 run plpslam_ros2 mono $PWD/../orb_vocab/orb_vocab.dbow2 $PWD/../example/tum_rgbd/TUM_RGBD_mono_1.yaml 0
+ros2 run plpslam_ros2 rgbd $PWD/../orb_vocab/orb_vocab.dbow2 $PWD/../example/tum_rgbd/TUM_RGBD_rgbd_1.yaml 0
+ros2 run plpslam_ros2 stereo $PWD/../orb_vocab/orb_vocab.dbow2 $PWD/../example/kitti/KITTI_stereo_00-02.yaml 1
+```
+(4th argument: 0=point only, 1=point+line)
+
+**Subscribed topics:**
+| Executable | Topics |
+|-----------|--------|
+| `mono` | `camera/image_raw` |
+| `rgbd` | `camera/rgb` + `camera/depth` |
+| `stereo` | `camera/left` + `camera/right` |
+
 ## Run Point-Line SLAM
 ### (1) TUM RGB-D (monocular/RGB-D)
 
