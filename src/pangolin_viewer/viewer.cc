@@ -228,11 +228,11 @@ namespace pangolin_viewer
         }
         else if (*menu_follow_camera_ && !follow_camera_)
         {
-            // State transition: reset projection + model-view, then follow
+            // State transition: reset projection + model-view (matching initial setup), then follow
             s_cam_->SetProjectionMatrix(pangolin::ProjectionMatrix(map_viewer_width_, map_viewer_height_,
                                        viewpoint_f_, viewpoint_f_,
                                        map_viewer_width_ / 2, map_viewer_height_ / 2, 0.1, 1e6));
-            s_cam_->SetModelViewMatrix(pangolin::ModelViewLookAt(viewpoint_x_, viewpoint_y_, viewpoint_z_,
+            s_cam_->SetModelViewMatrix(pangolin::ModelViewLookAt(viewpoint_x_ * 5.f, viewpoint_y_ * 5.f, viewpoint_z_ * 5.f,
                                        0, 0, 0, 0.0, -1.0, 0.0));
             s_cam_->Follow(gl_cam_pose_wc);
             follow_camera_ = true;
@@ -289,12 +289,21 @@ namespace pangolin_viewer
 
     void viewer::draw_current_cam_pose(const pangolin::OpenGlMatrix &gl_cam_pose_wc)
     {
-        // frustum size of the frame
-        const float w = camera_size_ * *menu_frm_size_;
+        // 3x larger than keyframes for clear distinction
+        const float w = camera_size_ * *menu_frm_size_ * 3.0f;
 
-        glLineWidth(camera_line_width_);
-        glColor3fv(cs_.curr_cam_.data());
+        // Bright red camera — always visible and distinct from map elements
+        glLineWidth(4.0f);
+        glColor3f(1.0f, 0.1f, 0.1f);
         draw_camera(gl_cam_pose_wc, w);
+
+        // Draw a bright red sphere at camera center as a clear position marker
+        glPointSize(12.0f);
+        glBegin(GL_POINTS);
+        glColor3f(1.0f, 0.0f, 0.0f);
+        // Camera center in world = translation part of gl_cam_pose_wc (which is T_wc = camera-to-world)
+        glVertex3f(gl_cam_pose_wc.m[3], gl_cam_pose_wc.m[7], gl_cam_pose_wc.m[11]);
+        glEnd();
     }
 
     void viewer::draw_keyframes()
