@@ -108,46 +108,15 @@ namespace pangolin_viewer
             // get current camera pose as OpenGL matrix
             gl_cam_pose_wc = get_current_cam_pose();
 
-            // Diagnostic: print camera pose on first frame
-            static bool once_pose = true;
-            if (once_pose) {
-                spdlog::info("[viewer] cam_pose_wc (first frame):\n[{:.3f}, {:.3f}, {:.3f}, {:.3f}]\n[{:.3f}, {:.3f}, {:.3f}, {:.3f}]\n[{:.3f}, {:.3f}, {:.3f}, {:.3f}]",
-                             gl_cam_pose_wc.m[0], gl_cam_pose_wc.m[1], gl_cam_pose_wc.m[2], gl_cam_pose_wc.m[3],
-                             gl_cam_pose_wc.m[4], gl_cam_pose_wc.m[5], gl_cam_pose_wc.m[6], gl_cam_pose_wc.m[7],
-                             gl_cam_pose_wc.m[8], gl_cam_pose_wc.m[9], gl_cam_pose_wc.m[10], gl_cam_pose_wc.m[11]);
-                once_pose = false;
-            }
-
             // make the rendering camera follow to the current camera
             follow_camera(gl_cam_pose_wc);
 
             // set rendering state
             d_cam.Activate(*s_cam_);
-
-            // DIAGNOSTIC: fill viewport with bright orange to confirm rendering works
-            glClearColor(1.0f, 0.5f, 0.0f, 1.0f);  // bright orange
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glClearColor(cs_.bg_.at(0), cs_.bg_.at(1), cs_.bg_.at(2), cs_.bg_.at(3));
 
             // draw horizontal grid
             draw_horizontal_grid();
-
-            // DEBUG: always draw reference axes at origin (X=Red, Y=Green, Z=Blue)
-            {
-                glLineWidth(5.0f);
-                glBegin(GL_LINES);
-                // X axis: red
-                glColor3f(1.0f, 0.0f, 0.0f);
-                glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(2.0f, 0.0f, 0.0f);
-                // Y axis: green
-                glColor3f(0.0f, 1.0f, 0.0f);
-                glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 2.0f, 0.0f);
-                // Z axis: blue
-                glColor3f(0.0f, 0.0f, 1.0f);
-                glVertex3f(0.0f, 0.0f, 0.0f); glVertex3f(0.0f, 0.0f, 2.0f);
-                glEnd();
-            }
-
             // draw the current camera frustum
             draw_current_cam_pose(gl_cam_pose_wc);
             // draw keyframes and graphs
@@ -323,9 +292,8 @@ namespace pangolin_viewer
         // frustum size of the frame
         const float w = camera_size_ * *menu_frm_size_;
 
-        // Current camera: thin red outline to distinguish from map keyframes (green)
-        glLineWidth(1.0f);
-        glColor3f(1.0f, 0.2f, 0.2f);  // red
+        glLineWidth(camera_line_width_);
+        glColor3fv(cs_.curr_cam_.data());
         draw_camera(gl_cam_pose_wc, w);
     }
 
@@ -337,35 +305,10 @@ namespace pangolin_viewer
         std::vector<PLPSLAM::data::keyframe *> keyfrms;
         map_publisher_->get_keyframes(keyfrms);
 
-        // Diagnostic: report when keyframes database is empty
-        static bool warned_empty_kf = false;
-        if (keyfrms.empty() && !warned_empty_kf) {
-            spdlog::warn("[viewer] draw_keyframes: keyframe database is EMPTY! Map may not be loaded.");
-            warned_empty_kf = true;
-        }
-
         if (*menu_show_keyfrms_)
         {
-            // Debug: print first keyframe position once
-            static bool once = true;
-            if (once && !keyfrms.empty()) {
-                auto kf = keyfrms.front();
-                auto c = kf->get_cam_center();
-                spdlog::info("First KF center: ({:.3f}, {:.3f}, {:.3f}), total={}",
-                             c(0), c(1), c(2), keyfrms.size());
-                once = false;
-            }
-
-            // Draw a BIG reference sphere at origin
-            glPointSize(12.0f);
-            glBegin(GL_POINTS);
-            glColor3f(1.0f, 0.0f, 1.0f);  // magenta at origin
-            glVertex3f(0.0f, 0.0f, 0.0f);
-            glEnd();
-            glPointSize(1.0f);
-
-            glLineWidth(3.0f);
-            glColor3f(0.0f, 1.0f, 0.0f);  // bright green
+            glLineWidth(keyfrm_line_width_);
+            glColor3fv(cs_.kf_line_.data());
             for (const auto keyfrm : keyfrms)
             {
                 if (!keyfrm || keyfrm->will_be_erased())
@@ -373,15 +316,7 @@ namespace pangolin_viewer
                     continue;
                 }
 
-                draw_camera(keyfrm->get_cam_pose_inv(), w * 5.0f);  // 5x larger frustums
-
-                // Draw a LARGE sphere at each keyframe center
-                glPointSize(10.0f);
-                glBegin(GL_POINTS);
-                const auto center = keyfrm->get_cam_center();
-                glVertex3fv(center.cast<float>().eval().data());
-                glEnd();
-                glPointSize(1.0f);
+                draw_camera(keyfrm->get_cam_pose_inv(), w);
 
                 // FW: code for dense reconstruction using depth
                 if (_draw_dense_pointcloud)
@@ -473,18 +408,12 @@ namespace pangolin_viewer
 
         map_publisher_->get_landmarks(landmarks, local_landmarks);
 
-        // Diagnostic: report when landmarks database is empty
-        static bool warned_empty_lm = false;
-        if (landmarks.empty() && !warned_empty_lm) {
-            spdlog::warn("[viewer] draw_landmarks: landmark database is EMPTY! Map may not be loaded.");
-            warned_empty_lm = true;
-        }
-
         if (landmarks.empty())
         {
             return;
         }
 
+        glPointSize(point_size_ * *menu_lm_size_);
         glBegin(GL_POINTS);
 
         for (const auto lm : landmarks)
@@ -498,8 +427,7 @@ namespace pangolin_viewer
                 continue;
             }
 
-            glPointSize(6.0f);
-            glColor3f(1.0f, 1.0f, 0.0f);  // bright yellow points
+            glColor3fv(cs_.lm_.data());
 
             const PLPSLAM::Vec3_t pos_w = lm->get_pos_in_world();
             glVertex3fv(pos_w.cast<float>().eval().data());
@@ -672,12 +600,12 @@ namespace pangolin_viewer
                     glVertex3f(p2(0), p2(1), p2(2));
 
                     // draw the plane base_vector_1 (yellow)
-                    glColor3f(1.0f, 1.0f, 0.0f);
+                    glColor3f(0.0f, 0.0f, 0.0f);
                     glVertex3f(center_point(0), center_point(1), center_point(2));
                     glVertex3f(p3(0), p3(1), p3(2));
 
                     // draw the plane base_vector_2 (yellow)
-                    glColor3f(1.0f, 1.0f, 0.0f);
+                    glColor3f(0.0f, 0.0f, 0.0f);
                     glVertex3f(center_point(0), center_point(1), center_point(2));
                     glVertex3f(p4(0), p4(1), p4(2));
                     glEnd();
