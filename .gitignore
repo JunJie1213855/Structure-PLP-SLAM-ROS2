@@ -13,3 +13,5 @@ debug.txt
 build
 install
 lib
+*.txt
+*.tum

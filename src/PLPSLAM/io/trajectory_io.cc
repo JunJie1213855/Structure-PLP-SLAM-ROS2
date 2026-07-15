@@ -35,6 +35,21 @@ namespace PLPSLAM
 {
     namespace io
     {
+        namespace
+        {
+            // Analytic SE(3) inverse (R^T | -R^T t). Do NOT use Eigen's generic 4x4
+            // .inverse() here: this project builds with -ffast-math, under which
+            // Matrix4d::inverse() returns corrupted results (see docs/problem.md),
+            // which would silently corrupt every saved trajectory.
+            Mat44_t inverse_pose(const Mat44_t &pose_cw)
+            {
+                const Mat33_t rot_wc = pose_cw.block<3, 3>(0, 0).transpose();
+                Mat44_t pose_wc = Mat44_t::Identity();
+                pose_wc.block<3, 3>(0, 0) = rot_wc;
+                pose_wc.block<3, 1>(0, 3) = -rot_wc * pose_cw.block<3, 1>(0, 3);
+                return pose_wc;
+            }
+        } // namespace
 
         trajectory_io::trajectory_io(data::map_database *map_db)
             : map_db_(map_db) {}
@@ -106,7 +121,7 @@ namespace PLPSLAM
                 const Mat44_t rel_cam_pose_cr = rc_itr->second;
 
                 const Mat44_t cam_pose_cw = rel_cam_pose_cr * cam_pose_rw;
-                const Mat44_t cam_pose_wc = cam_pose_cw.inverse();
+                const Mat44_t cam_pose_wc = inverse_pose(cam_pose_cw);
 
                 if (format == "KITTI")
                 {
@@ -174,7 +189,7 @@ namespace PLPSLAM
             for (const auto keyfrm : keyfrms)
             {
                 const Mat44_t cam_pose_cw = keyfrm->get_cam_pose();
-                const Mat44_t cam_pose_wc = cam_pose_cw.inverse();
+                const Mat44_t cam_pose_wc = inverse_pose(cam_pose_cw);
                 const auto timestamp = keyfrm->timestamp_;
 
                 if (format == "KITTI")
