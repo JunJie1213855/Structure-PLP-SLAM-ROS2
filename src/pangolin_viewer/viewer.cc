@@ -233,10 +233,16 @@ namespace pangolin_viewer
             s_cam_->SetProjectionMatrix(pangolin::ProjectionMatrix(map_viewer_width_, map_viewer_height_,
                                        viewpoint_f_, viewpoint_f_,
                                        map_viewer_width_ / 2, map_viewer_height_ / 2, 0.1, 1e6));
-            // Close-up viewpoint: camera fills ~25% of viewport (matches ORB_SLAM3 convention)
+            // NOTE: Follow() must come BEFORE SetModelViewMatrix().
+            // On the false->true transition Pangolin converts the current modelview into a
+            // camera-relative offset (modelview * T_wc). If we set the look-at first, that
+            // absolute view gets converted into a wrong offset anchored at the world origin.
+            // Calling Follow() first makes the subsequent look-at be interpreted directly as
+            // the camera-relative offset, which is the intended follow view.
+            s_cam_->Follow(view_matrix);
+            // Close-up viewpoint relative to the followed camera (matches ORB_SLAM3 convention)
             s_cam_->SetModelViewMatrix(pangolin::ModelViewLookAt(0.0, -0.8, -1.5,
                                        0, 0, 0, 0.0, -1.0, 0.0));
-            s_cam_->Follow(view_matrix);
             follow_camera_ = true;
         }
         else if (!*menu_follow_camera_ && follow_camera_)
