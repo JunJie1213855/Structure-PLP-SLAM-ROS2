@@ -42,6 +42,27 @@ namespace PLPSLAM
 
         std::atomic<unsigned int> keyframe::next_id_{0};
 
+        namespace
+        {
+            // Recompute per-keyline 2D line functions (ax + by + c = 0, normalized by
+            // sqrt(a^2+b^2)) from keylines — same formula as line_extractor.cc. Needed
+            // when loading a map database, which does not serialize this field.
+            std::vector<Vec3_t> compute_keyline_functions(const std::vector<cv::line_descriptor::KeyLine> &keylines)
+            {
+                std::vector<Vec3_t> functions;
+                functions.reserve(keylines.size());
+                for (const auto &kl : keylines)
+                {
+                    const Vec3_t sp_l{kl.startPointX, kl.startPointY, 1.0};
+                    const Vec3_t ep_l{kl.endPointX, kl.endPointY, 1.0};
+                    Vec3_t line_function = sp_l.cross(ep_l);
+                    line_function /= std::sqrt(line_function(0) * line_function(0) + line_function(1) * line_function(1));
+                    functions.push_back(line_function);
+                }
+                return functions;
+            }
+        } // namespace
+
         // FW: from a frame
         keyframe::keyframe(const frame &frm, map_database *map_db, bow_database *bow_db)
             : // meta information
@@ -158,6 +179,7 @@ namespace PLPSLAM
               inv_level_sigma_sq_(feature::orb_params::calc_inv_level_sigma_sq(num_scale_levels, scale_factor)),
               // FW:
               _num_keylines(num_keylines), _keylsd(keylines),
+              _keyline_functions(compute_keyline_functions(keylines)),
               _stereo_x_right_cooresponding_to_keylines(stereo_x_right_keylines),
               _depths_cooresponding_to_keylines(depths_keylines),
               _lbd_descr(lbd_descriptors),

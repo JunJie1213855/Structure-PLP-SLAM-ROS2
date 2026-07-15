@@ -51,6 +51,15 @@ namespace PLPSLAM
 
         bool two_view_triangulator_line::triangulate(const unsigned idx_1, const unsigned int idx_2, Vec6_t &pos_w_line) const
         {
+            // guard: keyframes restored from a map database may lack per-keyline data
+            if (keyfrm_1_->_keylsd.size() <= idx_1 || keyfrm_2_->_keylsd.size() <= idx_2 ||
+                keyfrm_1_->_keyline_functions.size() <= idx_1 || keyfrm_2_->_keyline_functions.size() <= idx_2 ||
+                keyfrm_1_->_stereo_x_right_cooresponding_to_keylines.size() <= idx_1 ||
+                keyfrm_2_->_stereo_x_right_cooresponding_to_keylines.size() <= idx_2)
+            {
+                return false;
+            }
+
             // get 2D line segments and function (parameters)
             cv::line_descriptor::KeyLine keyline1 = keyfrm_1_->_keylsd[idx_1];
             cv::line_descriptor::KeyLine keyline2 = keyfrm_2_->_keylsd[idx_2];

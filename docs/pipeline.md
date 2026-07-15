@@ -35,7 +35,7 @@ export LD_LIBRARY_PATH=$PWD/build/lib:$PWD/3rd/Pangolin/install/lib:$HOME/.local
     --eval-log --auto-term
 ```
 
-### 点 + 线特征
+### 深度相机 + 点 + 线特征
 
 ```bash
 ./build/run_tum_rgbd_slam_with_line \
@@ -101,7 +101,7 @@ ros2 run plpslam_ros2 rgbd \
 ros2 run plpslam_ros2 rgbd \
     ../orb_vocab/orb_vocab.dbow2 \
     ../example/tum_rgbd/TUM_RGBD_rgbd_2.yaml \
-    0 0 "" mymap.msg 1
+    1 0 "" mymap.msg 1
 ```
 
 > 参数 6 (`load_map`)：已有地图路径；参数 7 (`mapping`)：`0`=仅重定位，`1`=重定位+建图
