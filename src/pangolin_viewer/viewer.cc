@@ -290,10 +290,18 @@ namespace pangolin_viewer
     pangolin::OpenGlMatrix viewer::get_current_cam_pose()
     {
         const auto cam_pose_cw = map_publisher_->get_current_cam_pose();
-        // Return T_wc = camera-to-world (the camera's pose in world space)
-        // cam_pose_cw = T_cw (world-to-camera), inverse = T_wc (camera-to-world)
-        const pangolin::OpenGlMatrix gl_cam_pose_wc(cam_pose_cw.inverse().eval());
-        return gl_cam_pose_wc;
+        // Return T_wc = camera-to-world (the camera's pose in world space).
+        // NOTE: do NOT use Eigen's generic 4x4 .inverse() here — this project is
+        // compiled with -ffast-math, under which Matrix4d::inverse() returns
+        // corrupted results (alternating sign flips, (3,3) = -1), which makes
+        // the frustum vertices land behind the clip plane and vanish.
+        // Use the analytic SE(3) inverse instead: R^T | -R^T * t.
+        const PLPSLAM::Mat33_t rot_wc = cam_pose_cw.block<3, 3>(0, 0).transpose();
+        const PLPSLAM::Vec3_t trans_wc = -rot_wc * cam_pose_cw.block<3, 1>(0, 3);
+        PLPSLAM::Mat44_t cam_pose_wc = PLPSLAM::Mat44_t::Identity();
+        cam_pose_wc.block<3, 3>(0, 0) = rot_wc;
+        cam_pose_wc.block<3, 1>(0, 3) = trans_wc;
+        return pangolin::OpenGlMatrix(cam_pose_wc);
     }
 
     void viewer::draw_current_cam_pose(const pangolin::OpenGlMatrix &gl_cam_pose_wc)
