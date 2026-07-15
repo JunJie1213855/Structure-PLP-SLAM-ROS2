@@ -55,8 +55,8 @@ namespace pangolin_viewer
         kf_line_ = {{0.0f, 0.0f, 1.0f}};
         graph_line_ = {{0.0f, 1.0f, 0.0f, 0.6f}};
         lm_ = {{0.0f, 0.0f, 0.0f}};
-        // orange — red is reserved for the current camera frustum
-        local_lm_ = {{1.0f, 0.5f, 0.0f}};
+        // red — matched (local-map) landmarks, per user preference
+        local_lm_ = {{1.0f, 0.0f, 0.0f}};
     }
 
     void color_scheme::set_color_as_black()
@@ -67,8 +67,8 @@ namespace pangolin_viewer
         kf_line_ = {{0.0f, 1.0f, 0.0f}};
         graph_line_ = {{0.7f, 0.7f, 1.0f, 0.4f}};
         lm_ = {{0.9f, 0.9f, 0.9f}};
-        // yellow — red is reserved for the current camera frustum
-        local_lm_ = {{1.0f, 0.8f, 0.0f}};
+        // red — matched (local-map) landmarks, per user preference
+        local_lm_ = {{1.0f, 0.1f, 0.1f}};
     }
 
     void color_scheme::set_color_as_purple()
